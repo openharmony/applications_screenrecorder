@@ -1,0 +1,72 @@
+{
+  "color": [
+    {
+      "name": "mic_active",
+      "value": "#5291FF"
+    },
+    {
+      "name": "mic_inactive",
+      "value": "#FFFFFFFF"
+    },
+    {
+      "name": "color_shadow",
+      "value": "#33000000"
+    },
+    {
+      "name": "color_image_border",
+      "value": "#4D000000"
+    },
+    {
+      "name": "color_image_border_tv",
+      "value": "#1A000000"
+    },
+    {
+      "name": "capsule_normal_background",
+      "value": "#33000000"
+    },
+    {
+      "name": "capsule_pressed_background",
+      "value": "#00000000"
+    },
+    {
+      "name": "capsule_background",
+      "value": "#66000000"
+    },
+    {
+      "name": "capsule_divider",
+      "value": "#80FFFFFF"
+    },
+    {
+      "name": "capsule_shadow",
+      "value": "#4DFFFFFF"
+    },
+    {
+      "name": "divider_color",
+      "value": "#33000000"
+    },
+    {
+      "name": "color_control_highlight",
+      "value": "#0A59F7"
+    },
+    {
+      "name": "transparent",
+      "value": "#00000000"
+    },
+    {
+      "name": "dialog_shadow_color",
+      "value": "#2600001E"
+    },
+    {
+      "name": "dialog_shadow_color_hover",
+      "value": "#4D00001E"
+    },
+    {
+      "name": "control_page_button_text_color",
+      "value": "$ohos:color:ohos_id_color_text_primary_activated"
+    },
+    {
+      "name": "control_page_switch_color",
+      "value": "$ohos:color:ohos_id_color_component_activated"
+    }
+  ]
+}

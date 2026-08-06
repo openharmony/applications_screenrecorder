@@ -1,0 +1,23 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"one",
+                    "value":"Ekran kaydı başlattığınızda ekrandaki tüm içerik ve işlemler video biçiminde kaydedilecektir. Bu özellik %1$d izin gerektirir.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                },
+                {
+                    "quantity":"other",
+                    "value":"Ekran kaydı başlattığınızda ekrandaki tüm içerik ve işlemler video biçiminde kaydedilecektir. Bu özellik %1$d izin gerektirir.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}

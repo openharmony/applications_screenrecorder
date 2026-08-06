@@ -1,0 +1,11 @@
+{
+    "string":[
+        {
+            "name":"app_name",
+            "value":"Gravar ecrã",
+            "attr":{
+                "priority":"translate"
+            }
+        }
+    ]
+}

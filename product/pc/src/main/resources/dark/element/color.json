@@ -1,0 +1,12 @@
+{
+  "color": [
+    {
+      "name": "select_panel_background",
+      "value": "#ff000000"
+    },
+    {
+      "name": "select_panel_out_border",
+      "value": "#66000000"
+    }
+  ]
+}

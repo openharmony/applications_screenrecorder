@@ -1,0 +1,480 @@
+{
+    "string":[
+        {
+            "name":"cannot_record_during_call_toast",
+            "value":"Không thể ghi màn hình khi đang gọi điện.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"stop_reason_phone_memory_full_toast",
+            "value":"Bộ nhớ thiết bị sắp hết. Video đã được lưu.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_window_name",
+            "value":"Chọn nội dung cần chia sẻ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_a_screen",
+            "value":"Chạm vào màn hình bạn muốn quay",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_track_button",
+            "value":"Hiển thị dấu vết chạm",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_subtitle",
+            "value":"Đang quay phim màn hình",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"local_permission_reason_mic_1",
+            "value":"Quyền này được sử dụng để ghi âm thanh.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_stop_recording",
+            "value":"Dừng quay",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"stop_reason_file_changed_toast",
+            "value":"Đã dừng quay video. Bản ghi đã được sửa đổi hoặc xóa.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_storage_description",
+            "value":"Quyền này được sử dụng để lưu trữ bản quay phim màn hình.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"app_name",
+            "value":"Trình quay phim màn hình",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_pc_text",
+            "value":"Video quay phim màn hình đã được lưu vào Tệp tin",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone",
+            "value":"Micrô",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_mission",
+            "value":"Cửa sổ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_privacy_protection",
+            "value":"Ẩn nội dung riêng tư",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_failed_toast",
+            "value":"Quay không thành công. Vui lòng thử lại.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_media_and_files_permission",
+            "value":"Phương tiện và tệp tin",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_title",
+            "value":"Thông báo Quyền riêng tư",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_button_share",
+            "value":"Bắt đầu chia sẻ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"recorder_file_saved_pc_toast",
+            "value":"Đã lưu vào Tệp tin.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_interface_toast",
+            "value":"Màn hình này có chứa nội dung riêng tư và sẽ không được ghi lại.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hw_video_close_mic",
+            "value":"Chưa bật micrô.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_content",
+            "value":"%s sẽ bắt đầu quay lại nội dung trên màn hình của bạn. Hãy đảm bảo bảo vệ thông tin cá nhân như mật khẩu, thông tin thanh toán, ảnh, video và cuộc trò chuyện.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"button",
+            "value":"Nút",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_text",
+            "value":"Video quay phim màn hình đã được lưu vào Bộ sưu tập.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_screen",
+            "value":"Màn hình",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share",
+            "value":"Chia sẻ",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_click_info",
+            "value":"Bằng việc chạm vào ĐỒNG Ý, bạn đồng ý với các điều khoản này.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_cancel",
+            "value":"Hủy",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_cancel",
+            "value":"Hủy",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_dialog_Deny",
+            "value":"Từ chối",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_icon_name",
+            "value":"Trình quay phim màn hình",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_agree",
+            "value":"OK",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hw_video_without_voice_2",
+            "value":"Đang sử dụng micrô.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_title",
+            "value":"Cho phép %s sử dụng màn hình của bạn?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_window_button_back",
+            "value":"Trở lại",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_mic_permission",
+            "value":"Micrô",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_start_recording",
+            "value":"Bắt đầu quay",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_content",
+            "value":"Ứng dụng này sẽ có thể quay hoặc truyền mọi thứ trên màn hình của bạn cũng như âm thanh hệ thống. Hãy đảm bảo bảo vệ thông tin cá nhân nhạy cảm như mật khẩu, thông tin thanh toán, ảnh, video và cuộc trò chuyện.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_saved_toast",
+            "value":"Bản ghi được lưu vào Bộ sưu tập.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"file_name_illegal",
+            "value":"Lỗi tên tệp tin quay phim màn hình.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_Allow",
+            "value":"Cho phép",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"storageFull_changeto_sdcard_new",
+            "value":"Không ghi màn hình được do bộ nhớ trong không đủ không gian trống. Bạn cần giải phóng thêm không gian trống.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_agree",
+            "value":"Đồng ý",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone_being_used_toast",
+            "value":"Một ứng dụng khác đang sử dụng micrô.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"cannot_record_voice_during_call_toast",
+            "value":"Không thể ghi âm trong khi gọi.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_off",
+            "value":"Tắt hiển thị số lần chạm",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_off",
+            "value":"Tắt micrô",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_on",
+            "value":"Bật micrô",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_on",
+            "value":"Bật hiển thị số lần chạm",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_system_audio",
+            "value":"Chia sẻ âm thanh máy tính",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_select_upper",
+            "value":"Nửa trên màn hình",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_full",
+            "value":"Toàn màn hình",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_lower",
+            "value":"Nửa dưới màn hình",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_window_stop_button",
+            "value":"Kết thúc",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app",
+            "value":"Ẩn nội dung ứng dụng riêng tư",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_system",
+            "value":"Ẩn cửa sổ hệ thống",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_system_content",
+            "value":"Áp dụng cho thông báo, phương thức nhập liệu và nhiều nội dung khác.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_title",
+            "value":"%s đang sử dụng màn hình",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app_content",
+            "value":"Áp dụng cho các ứng dụng thanh toán, SMS, v.v.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_pc_text",
+            "value":"Đã lưu vào Tệp tin.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_text",
+            "value":"Đã lưu vào Bộ sưu tập",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_off",
+            "value":"%s, đã tắt",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_on",
+            "value":"%s, đang bật",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"mic_is_unavailable",
+            "value":"Micrô không hoạt động.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_record_toast",
+            "value":"Màn hình chứa nội dung riêng tư. Nội dung này sẽ không được bao gồm trong bản ghi.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_audio",
+            "value":"Chia sẻ âm thanh",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+      {
+        "name": "select_this_display_to_recorder",
+        "value": "Chạm để quay phim màn hình này",
+        "attr": {
+          "priority": "translate"
+        }
+        }
+    ]
+}

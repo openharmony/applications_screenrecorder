@@ -1,0 +1,16 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"other",
+                    "value":"スクリーン録画を開始すると、画面上のすべての内容と操作がビデオ形式でキャプチャされます。この機能は%1$d個の権限を必要とします。",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}

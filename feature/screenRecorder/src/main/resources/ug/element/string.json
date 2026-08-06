@@ -1,0 +1,480 @@
+{
+    "string":[
+        {
+            "name":"cannot_record_during_call_toast",
+            "value":"سۆزلىشىۋاتقاندا ئېكران خاتىرىلەنمەيدۇ.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"stop_reason_phone_memory_full_toast",
+            "value":"ئۈسكۈنىدە بوشلۇق يېتەرسىز، ئېكران سىنى ساقلاندى.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"microphone",
+            "value":"مىكروفون",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_click_info",
+            "value":"«قوشۇلىمەن» نى چەكسىڭىز، يۇقىرىقىلارغا قوشۇلغان بولىسىز.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_cancel",
+            "value":"بىكار قىلىش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"local_permission_reason_mic_1",
+            "value":"مۇھىت ئاۋازىنى خاتىرىلەشكە ئىشلىتىلىدۇ.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_media_and_files_permission",
+            "value":"مېدىيا ۋە ھۆججەت",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_storage_description",
+            "value":"ئېكران خاتىرىسى ساقلاشقا ئىشلىتىلىدۇ.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"app_name",
+            "value":"ئېكران خاتىرىلەش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_mic_permission",
+            "value":"مىكروفون",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_saved_toast",
+            "value":"ئامبارغا ساقلاندى.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_saved_pc_toast",
+            "value":"«ھۆججەت» كە ساقلاندى.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"storageFull_changeto_sdcard_new",
+            "value":"ئىچكى سىغىم كەم، ئالغىلى بولمايدۇ. بەزى ھۆججەتنى ئۆچۈرۈپ سىغىم بىكارلاڭ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_interface_toast",
+            "value":"بۇ بەت مەخپىيەتلىككە چېتىلىدۇ، خاتىرىلەنمەيدۇ.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_agree",
+            "value":"قوشۇلىمەن",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_failed_toast",
+            "value":"ئېكران خاتىرىلەنمىدى، قايتا سىناڭ.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_content",
+            "value":"\u200f«%s» ئېكراندىكى مەزمۇننى خاتىرىلەيدۇ/باشقا ئۈسكۈنىگە سۇنىدۇ. پارول، مۇئامىلە ئۇچۇرى، مەخپىي ھۆججەت، رەسىم، سىن ۋە سۆھبەت خاتىرىسى قاتارلىق شەخسىي مەلۇماتلارنى قوغداشقا دىققەت قىلىڭ.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_title",
+            "value":"ئېكران خاتىرىلەش/سۇنۇشنى باشقۇرۇش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_cancel",
+            "value":"بىكار قىلىش",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_agree",
+            "value":"جەزملەش",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_dialog_Deny",
+            "value":"چەكلەش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_Allow",
+            "value":"رۇخسەت",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_text",
+            "value":"ئېكران سىنى ئامبارغا ساقلاندى.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_pc_text",
+            "value":"ئېكران سىنى «ھۆججەت» كە ساقلاندى.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_subtitle",
+            "value":"ئېكران خاتىرىلىنىۋاتىدۇ",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hw_video_without_voice_2",
+            "value":"مىكروفون ئالدىراش.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_title",
+            "value":"\u200f«%s» ئېكرانىڭىزنى ئىشلەتمەكچى",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_dialog_content",
+            "value":"بۇ ئىجازەت ئېكراندىكى بارلىق مەزمۇن ۋە سىستېما ئاۋازىنى خاتىرىلەش/باشقا ئۈسكۈنىگە سۇنۇش ئۈچۈن ئىشلىتىلىدۇ. پارول، مۇئامىلە ئۇچۇرى، رەسىم، سىن ۋە سۆھبەت خاتىرىسى قاتارلىق شەخسىي مەلۇماتلارنى قوغداشقا دىققەت قىلىڭ.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"file_name_illegal",
+            "value":"ئېكران سىنىنىڭ نامى نورمالسىز.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_window_name",
+            "value":"ئورتاقلىشىدىغان مەزمۇن تاللاش",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_screen",
+            "value":"ئېكران",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_mission",
+            "value":"كۆزنەك",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_button_back",
+            "value":"قايتىش",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_button_share",
+            "value":"ئورتاقلىشىش",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_text",
+            "value":"ئامبارغا ساقلاندى",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_pc_text",
+            "value":"«ھۆججەت» كە ساقلاندى، ئىشلەتكىنىڭىزگە رەھمەت",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share",
+            "value":"ئورتاقلىشىش",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_track_button",
+            "value":"سەزمە ئىزىنى كۆرسىتىش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_stop_recording",
+            "value":"خاتىرىلەشنى توختىتىش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_icon_name",
+            "value":"ئېكران خاتىرىلەش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_start_recording",
+            "value":"خاتىرىلەشنى باشلاش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"already_off",
+            "value":"‏%s ئېتىك",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_on",
+            "value":"‏%s ئوچۇق",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"stop_reason_file_changed_toast",
+            "value":"ئېكران خاتىرىلەش توختىدى، ئېكران سىنى ئۆزگەرتىلگەن ياكى چىقىرىۋېتىلگەن.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"button",
+            "value":"كۇنۇپكا",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_off",
+            "value":"ئېتىك، سەزمە ئىزىنى كۆرسىتىش",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_off",
+            "value":"ئېتىك، مىكروفون",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_on",
+            "value":"ئوچۇق، مىكروفون",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_on",
+            "value":"ئوچۇق، سەزمە ئىزىنى كۆرسىتىش",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hw_video_close_mic",
+            "value":"مىكروفون ئېتىك.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_a_screen",
+            "value":"ئۈستى/ئاستى يېرىم ئېكراننى چېكىپ، شۇ يېرىم ئېكراننى سىنغا ئېلىشقا بولىدۇ.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_privacy_protection",
+            "value":"ئېكراندا مەخپىيەتلىك قوغداش",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_upper",
+            "value":"ئۈستۈن يېرىم ئېكران",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_select_full",
+            "value":"تولۇق ئېكران",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_select_lower",
+            "value":"تۆۋەن يېرىم ئېكران",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"microphone_being_used_toast",
+            "value":"باشقا ئەپ مىكروفون ئىشلىتىۋاتىدۇ.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cannot_record_voice_during_call_toast",
+            "value":"سۆزلىشىۋاتقاندا ئۈن ئېلىنمايدۇ.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"share_system_audio",
+            "value":"كومپيۇتېر ئاۋازىنى ئورتاقلىشىش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_stop_button",
+            "value":"ئاياغلاشتۇرۇش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app",
+            "value":"سەزگۈر ئەپ قوغداش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_system",
+            "value":"سىستېما كۆزنەك قوغداش",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_system_content",
+            "value":"ئۇقتۇرۇش ۋە كىرگۈزگۈچ قاتارلىق مەخپىيەتلىككە چېتىلىدىغان مەزمۇنلار يوشۇرۇنىدۇ.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_title",
+            "value":"ئېكراننى «%s» ئىشلىتىۋاتىدۇ",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app_content",
+            "value":"پۇل-مۇئامىلە ۋە سىستېما قىسقا ئۇچۇر ئەپ دېگەندەك سەزگۈر مەزمۇن بار ئەپ ئارايۈزلىرىگە قوللىنىلىدۇ.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"mic_is_unavailable",
+            "value":"مىكروفون ئىشلەيدۇ.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_record_toast",
+            "value":"بۇ بەت مەخپىيەتلىككە چېتىلىدۇ، بەزى مەزمۇن خاتىرىلەنمەيدۇ.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_audio",
+            "value":"ئاۋاز ئورتاقلىشىش",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+      {
+        "name": "select_this_display_to_recorder",
+        "value": "چەكسىڭىز بۇ ئېكران خاتىرىلىنىدۇ.",
+        "attr": {
+          "priority": "translate"
+        }
+        }
+    ]
+}

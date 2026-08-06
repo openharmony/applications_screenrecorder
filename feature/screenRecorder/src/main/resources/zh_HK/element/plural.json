@@ -1,0 +1,16 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"other",
+                    "value":"啟用屏幕錄影後，所有屏幕操作都會被錄製成影片檔案。本服務啟動時需申請以下 %1$d 個權限：",
+                    "attr":{
+                        "priority":"LT"
+                    }
+                }
+            ]
+        }
+    ]
+}

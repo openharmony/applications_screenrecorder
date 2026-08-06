@@ -1,0 +1,480 @@
+{
+    "string":[
+        {
+            "name":"cannot_record_during_call_toast",
+            "value":"Ne peut pas faire une capture vidéo d'écran durant un appel.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"stop_reason_phone_memory_full_toast",
+            "value":"Capacité de stockage de l'appareil faible. La vidéo a été enregistrée.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_window_name",
+            "value":"Sélectionner le contenu à partager",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_a_screen",
+            "value":"Veuillez toucher l'écran que vous souhaitez enregistrer",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_track_button",
+            "value":"Afficher les sélections au toucher",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_subtitle",
+            "value":"Capture vidéo d'écran en cours",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"local_permission_reason_mic_1",
+            "value":"Ceci est utilisé pour enregistrer du son.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_stop_recording",
+            "value":"Arrêter la capture",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"stop_reason_file_changed_toast",
+            "value":"L'enregistrement vidéo s'est arrêté. L'enregistrement a été modifié ou supprimé.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_storage_description",
+            "value":"Ceci est utilisé pour stocker les captures vidéo d'écran.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"app_name",
+            "value":"Capture vidéo d'écran",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_pc_text",
+            "value":"Capture vidéo d'écran enregistrée dans Fichiers",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone",
+            "value":"Micro",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_mission",
+            "value":"Fenêtre",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_privacy_protection",
+            "value":"Masquer le contenu privé",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_failed_toast",
+            "value":"L'enregistrement a échoué. Veuillez réessayer.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_media_and_files_permission",
+            "value":"Fichiers et contenu média",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_title",
+            "value":"Avis relatif à la vie privée",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_button_share",
+            "value":"Commencer le partage",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"recorder_file_saved_pc_toast",
+            "value":"Enregistré dans Fichiers.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_interface_toast",
+            "value":"Cet écran contient du contenu à caractère privé et ne sera pas enregistré.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hw_video_close_mic",
+            "value":"Le microphone n'est pas activé.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_content",
+            "value":"%s commencera à enregistrer le contenu de votre écran. Veuillez penser à protéger vos informations privées telles que les mots de passe, les données de paiement, les photos, les vidéos et les discussions.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"button",
+            "value":"Bouton",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_text",
+            "value":"La capture vidéo d'écran a été enregistrée dans Galerie.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_screen",
+            "value":"Écran",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share",
+            "value":"Partager",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_click_info",
+            "value":"En touchant ACCEPTER, vous reconnaissez avoir lu, compris et accepté le contenu ci-dessus.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_cancel",
+            "value":"Annuler",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_cancel",
+            "value":"Annuler",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_dialog_Deny",
+            "value":"Refuser",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_icon_name",
+            "value":"Capture vidéo d'écran",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_agree",
+            "value":"OK",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hw_video_without_voice_2",
+            "value":"Micro en cours d'utilisation.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_title",
+            "value":"Autoriser %s à utiliser votre écran ?",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_button_back",
+            "value":"Retour en arrière",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_mic_permission",
+            "value":"Micro",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_start_recording",
+            "value":"Démarrer la capture",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_content",
+            "value":"Cette application pourra enregistrer ou diffuser tout ce qui est affiché sur votre écran, ainsi que les sons du système. Veillez à protéger les informations/données personnelles sensibles telles que les mots de passe, les informations de paiement, les photos, les vidéos et les conversations.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_saved_toast",
+            "value":"La capture vidéo d'écran a été enregistrée dans Galerie.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"file_name_illegal",
+            "value":"Erreur dans le nom du fichier d'enregistrement d'écran.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_Allow",
+            "value":"Autoriser",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"storageFull_changeto_sdcard_new",
+            "value":"Espace de stockage restant sur la mémoire interne insuffisant. La capture vidéo d'écran ne peut pas être enregistrée. Veuillez supprimer des fichiers pour libérer de l'espace.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_agree",
+            "value":"Accepter",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone_being_used_toast",
+            "value":"Une autre application utilise le microphone.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cannot_record_voice_during_call_toast",
+            "value":"L'enregistrement du son pendant un appel a échoué.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_off",
+            "value":"Éteint, afficher des sélections au toucher",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_off",
+            "value":"Éteint, microphone",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_on",
+            "value":"Allumé, microphone",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_on",
+            "value":"Allumé, afficher des sélections au toucher",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_system_audio",
+            "value":"Partager l'audio de l'ordinateur",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_select_upper",
+            "value":"Moitié supérieure de l'écran",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_full",
+            "value":"Plein écran",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_lower",
+            "value":"Moitié inférieure de l'écran",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_window_stop_button",
+            "value":"Fin",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app",
+            "value":"Masquage du contenu d'applications privées",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_system",
+            "value":"Masquage des fenêtres du système",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_system_content",
+            "value":"S'applique aux notifications, méthodes de saisie et plus encore.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_title",
+            "value":"%s utilise l'écran",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app_content",
+            "value":"S'applique aux applications de paiement, aux SMS et plus encore.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_pc_text",
+            "value":"Enregistré dans Fichiers.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_text",
+            "value":"Enregistrée dans Galerie",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_off",
+            "value":"%s, désactivé",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_on",
+            "value":"%s, activé",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"mic_is_unavailable",
+            "value":"Le microphone est indisponible.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_record_toast",
+            "value":"L'écran contient du contenu privé. Il ne sera pas inclus dans l'enregistrement.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_audio",
+            "value":"Partager l'audio",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+      {
+        "name": "select_this_display_to_recorder",
+        "value": "Veuillez toucher pour enregistrer cet écran",
+        "attr": {
+          "priority": "translate"
+        }
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+  "color": [
+    {
+      "name": "transparent",
+      "value": "#00000000"
+    },
+    {
+      "name": "select_panel_background",
+      "value": "#ffffffff"
+    },
+    {
+      "name": "select_panel_inner_border",
+      "value": "#33ffffff"
+    },
+    {
+      "name": "select_panel_out_border",
+      "value": "#1A000000"
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+    "string":[
+        {
+            "name":"microphone",
+            "value":"[TS_805285]_Mic"
+        },
+        {
+            "name":"pre_authorization_dialog_mic_permission",
+            "value":"[TS_805282]_Microphone"
+        },
+        {
+            "name":"pre_authorization_dialog_click_info",
+            "value":"[TS_805279]_By tapping Agree, you agree to these terms."
+        },
+        {
+            "name":"pre_authorization_dialog_cancel",
+            "value":"[TS_805276]_Cancel"
+        },
+        {
+            "name":"local_permission_reason_mic_1",
+            "value":"[TS_805278]_This is used to record sound."
+        },
+        {
+            "name":"pre_authorization_dialog_media_and_files_permission",
+            "value":"[TS_805277]_Media and files"
+        },
+        {
+            "name":"pre_authorization_dialog_storage_description",
+            "value":"[TS_805281]_This is used to store screen recordings."
+        },
+        {
+            "name":"pre_authorization_dialog_agree",
+            "value":"[TS_805283]_Agree"
+        },
+        {
+            "name":"recorder_file_saved_toast",
+            "value":"[TS_805946]_Recording saved to Gallery."
+        },
+        {
+            "name":"recorder_file_saved_pc_toast",
+            "value":"[TS_979187]_Saved to Files."
+        },
+        {
+            "name":"app_name",
+            "value":"[TS_805286]_Screen recorder"
+        },
+        {
+            "name":"cannot_record_during_call_toast",
+            "value":"[TS_872846]_Unable to record screen in a call."
+        },
+        {
+            "name":"stop_reason_phone_memory_full_toast",
+            "value":"[TS_805947]_Device storage low. Video has been saved."
+        },
+        {
+            "name":"recorder_file_failed_toast",
+            "value":"[TS_872847]_Recording failed. Please try again."
+        },
+        {
+            "name":"storageFull_changeto_sdcard_new",
+            "value":"[TS_805948]_Unable to record screen due to lack of space in internal storage. Delete files to free up space."
+        },
+        {
+            "name":"privacy_interface_toast",
+            "value":"[TS_872845]_This screen contains private content and won't be recorded."
+        },
+        {
+            "name":"privacy_window_content",
+            "value":"[TS_905445]_%s will start capturing the contents of your screen. Be sure to safeguard private information like passwords, payment details, photos, videos, and chats."
+        },
+        {
+            "name":"privacy_window_cancel",
+            "value":"[TS_905446]_Cancel"
+        },
+        {
+            "name":"privacy_window_title",
+            "value":"[TS_905447]_Privacy notice"
+        },
+        {
+            "name":"privacy_window_agree",
+            "value":"[TS_905444]_OK"
+        },
+        {
+            "name":"notification_text",
+            "value":"[TS_927081]_Screen recording saved to Gallery."
+        },
+        {
+            "name":"notification_pc_text",
+            "value":"[TS_979189]_Screen recording saved to Files"
+        },
+        {
+            "name":"notification_subtitle",
+            "value":"[TS_927083]_Recording screen"
+        },
+        {
+            "name":"hw_video_without_voice_2",
+            "value":"[TS_929764]_Microphone in use."
+        },
+        {
+            "name":"privacy_dialog_Deny",
+            "value":"[TS_930854]_Deny"
+        },
+        {
+            "name":"privacy_dialog_title",
+            "value":"[TS_930851]_Allow %s to use your screen?"
+        },
+        {
+            "name":"privacy_dialog_content",
+            "value":"[TS_930853]_This app will be able to record or cast everything on your screen, as well as system sounds. Be sure to safeguard sensitive personal information such as passwords, payment information, photos, videos, and conversations."
+        },
+        {
+            "name":"privacy_dialog_Allow",
+            "value":"[TS_930852]_Allow"
+        },
+        {
+            "name":"file_name_illegal",
+            "value":"[TS_943615]_Screen recording file name error."
+        },
+        {
+            "name":"select_window_name",
+            "value":"[TS_948962]_Select content to share"
+        },
+        {
+            "name":"select_window_screen",
+            "value":"[TS_948959]_Screen"
+        },
+        {
+            "name":"select_window_mission",
+            "value":"[TS_948960]_Window"
+        },
+        {
+            "name":"select_window_button_back",
+            "value":"[TS_948958]_Go back"
+        },
+        {
+            "name":"select_window_button_share",
+            "value":"[TS_948961]_Start sharing"
+        },
+        {
+            "name":"preview_image_accessibility_text",
+            "value":"[TS_949564]_Saved to Gallery"
+        },
+        {
+            "name":"preview_image_accessibility_pc_text",
+            "value":"[TS_979186]_Saved to Files."
+        },
+        {
+            "name":"control_track_button",
+            "value":"[TS_960755]_Show touch traces"
+        },
+        {
+            "name":"control_stop_recording",
+            "value":"[TS_960757]_Stop recording"
+        },
+        {
+            "name":"control_icon_name",
+            "value":"[TS_960754]_Screen recorder"
+        },
+        {
+            "name":"control_start_recording",
+            "value":"[TS_960753]_Start recording"
+        },
+        {
+            "name":"share",
+            "value":"[TS_960756]_Share"
+        },
+        {
+            "name":"already_off",
+            "value":"[TS_970081]_%s, off"
+        },
+        {
+            "name":"already_on",
+            "value":"[TS_970080]_%s, on"
+        },
+        {
+            "name":"stop_reason_file_changed_toast",
+            "value":"[TS_975844]_Video recording stopped. Recording was modified or deleted."
+        },
+        {
+            "name":"button",
+            "value":"[TS_979188]_Button"
+        },
+        {
+            "name":"notification_trace_accessibility_text_off",
+            "value":"[TS_979459]_Off, show touches"
+        },
+        {
+            "name":"notification_mic_accessibility_text_off",
+            "value":"[TS_979458]_Off, microphone"
+        },
+        {
+            "name":"notification_mic_accessibility_text_on",
+            "value":"[TS_979457]_On, microphone"
+        },
+        {
+            "name":"notification_trace_accessibility_text_on",
+            "value":"[TS_979456]_On, show touches"
+        },
+        {
+            "name":"hw_video_close_mic",
+            "value":"[TS_1040589]_Microphone not turned on."
+        },
+        {
+            "name":"select_a_screen",
+            "value":"[TS_1048139]_Tap the screen you'd like to record"
+        },
+        {
+            "name":"screen_privacy_protection",
+            "value":"[TS_1057121]_Hide private content"
+        },
+        {
+            "name":"screen_select_upper",
+            "value":"[TS_1062588]_Upper half of screen"
+        },
+        {
+            "name":"screen_select_full",
+            "value":"[TS_1062589]_Full screen"
+        },
+        {
+            "name":"screen_select_lower",
+            "value":"[TS_1062587]_Lower half of screen"
+        },
+        {
+            "name":"microphone_being_used_toast",
+            "value":"[TS_1082275]_Another app is using the microphone."
+        },
+        {
+            "name":"cannot_record_voice_during_call_toast",
+            "value":"[TS_1082276]_Can't record audio during a call."
+        },
+        {
+            "name":"share_system_audio",
+            "value":"[TS_1086570]_Share computer audio"
+        },
+        {
+            "name":"private_window_stop_button",
+            "value":"[TS_1095039]_End"
+        },
+        {
+            "name":"private_protect_app",
+            "value":"[TS_1095044]_Hide private app content"
+        },
+        {
+            "name":"private_protect_system",
+            "value":"[TS_1095040]_Hide system windows"
+        },
+        {
+            "name":"private_protect_system_content",
+            "value":"[TS_1095043]_Applies to notifications, input methods, and more."
+        },
+        {
+            "name":"private_window_title",
+            "value":"[TS_1095041]_%s is using the screen"
+        },
+        {
+            "name":"private_protect_app_content",
+            "value":"[TS_1095042]_Applies to payment apps, SMS, and more."
+        },
+        {
+            "name":"mic_is_unavailable",
+            "value":"[TS_1115111]_Microphone is unavailable."
+        },
+        {
+            "name":"privacy_window_record_toast",
+            "value":"[TS_1164568]_Screen contains private content. Will not be included in recording."
+        },
+        {
+            "name":"share_audio",
+            "value":"[TS_1167197]_Share audio"
+        },
+      {
+        "name": "select_this_display_to_recorder",
+        "value": "[TS_1184462]_Tap to record this screen"
+        }
+    ]
+}

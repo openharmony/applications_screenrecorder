@@ -1,2 +1,332 @@
-# applications_screenrecorder
+# 录屏（ScreenRecorder）
 
+## 简介
+
+**录屏**（包名：`com.ohos.screenrecorder`）是 OpenHarmony 中预置的 **系统应用**，通过 `AVScreenCaptureRecorder` 采集屏幕画面与音频，提供屏幕录制、录制交互控制、录制文件处理、安全隐私界面处理能力，并适配手机、平板、PC 设备形态。
+
+本应用为系统预置应用，用户可从控制中心快捷开关、快捷键触发录屏。
+
+### 核心能力
+
+**屏幕录制**
+- 基于 `AVScreenCaptureRecorder` 实现 H.264 视频编码与 AAC 音频编码采集。
+- 支持屏幕画面录制和触控轨迹录制，支持麦克风录制和媒体音录制两种音源。
+- 通过 `RecordManager` / `PcRecordManager` 完成录制状态机管理，通过 `RecorderConfigInterface` 策略模式为不同设备提供差异化录制参数。
+
+**录屏交互与控制**
+- 通过 `ServiceExtensionAbility` 入口接收控制中心快捷开关事件、快捷键事件，触发录屏的启动与停止。
+- 录制过程中呈现胶囊窗口（PC 浮动可拖拽窗口 / Phone & Pad 系统通知栏实况窗），包含计时器、麦克风开关、触控轨迹开关与停止按钮。
+- 通过 `NotificationManager` 发布系统通知实况窗（`SlotType.LIVE_VIEW`），按钮回调由 `SystemLiveViewSubscriber` 处理。
+
+**录制文件处理**
+- 录制文件存储于系统媒体库，遵循 SVID 命名规范（`SVID_YYYYMMDD_HHmmss_N.mp4`）。
+- 停止录制后以动画方式展示缩略图预览窗，点击跳转相册播放，支持拖拽关闭。
+- 录制中断（锁屏、省电模式等）时通过通知提示用户。
+- 通过 `WindowManager` / `PcWindowManager` 管理预览窗的缩放、模糊、透明度动画序列与拖拽交互。
+
+**安全隐私界面处理**
+- 安全隐私界面不允许录制：进入隐私界面会自动录制为黑屏，但不会停止录制，缩略图输出为黑屏图。
+- 录制过程中检测到隐私界面时，通过 Toast 提示用户“当前界面涉及隐私内容，不会被录制”。
+- 锁屏状态下拒绝录屏请求。
+- OOBE（开机引导）阶段禁止触发录屏。
+
+
+## 架构说明
+
+录屏采用分层与模块化设计，按产品形态、业务特性与公共能力组织代码。
+
+![架构说明](./docs/figures/ScreenRecorder.png)
+
+
+### 应用层分层设计
+
+整体可划分为产品层、特性层、公共层：
+
+| 层次   | 主要目录 / 组件 | 说明                                               |
+|------| -------------- |--------------------------------------------------|
+| 产品层 | `product/phone`、`product/pad`、`product/pc` | 支持手机、平板、PC 形态，各产品以 `ServiceExtensionAbility` 为入口 |
+| 特性层 | `feature/screenRecorder` | 录屏核心模块（包括：屏幕录制、交互控制、文件处理、隐私界面处理）                 |
+| 公共层 | `common` | 状态管理、系统事件订阅、日志工具、Worker、DFX工具                    |
+
+**特性层模块说明**：
+
+| 核心能力   | 模块与关键类                                                                                               | 说明                      |
+|--------|------------------------------------------------------------------------------------------------------|-------------------------|
+| 屏幕录制   | `feature/screenRecorder`(RecordManager, PcRecordManager, RecorderFileManager, RecorderConfigInterface) | 录制状态机、录制状态机（PC）、文件资产管理、设备差异化配置         |
+| 录屏交互与控制   | `feature/screenRecorder`(NotificationManager, Capsule, MicManager, ScreenRecorderControlPage)          | 系统通知实况窗、PC 浮动胶囊、麦克风控制、触控轨迹控制 |
+| 录制文件处理 | `feature/screenRecorder`(RecorderFileManager, WindowManager, PcWindowManager, PicturePreviewer)                               | 文件资产管理、预览窗动画（Phone/Pad）、预览窗拖拽（PC）、跳转相册播放         |
+| 安全隐私界面处理 | `feature/screenRecorder`(ExtAbilityProxy, RecorderUtil, FileWriteCheckWorker)                                                 | 锁屏/OOBE/省电模式拒绝触发、隐私界面处理、文件大小与空间监控 |
+
+### 与其他应用的关系
+
+| 项目          | 说明                                                      |
+|-------------|---------------------------------------------------------|
+| 是否允许其他应用调用  | 允许。`ServiceExtensionAbility` 声明 exported=true，外部应用可通过 Want 拉起         |
+| 谁能调用        | 支持大桌面（`com.ohos.sceneboard`）拉起，系统快捷键通过多模输入子系统触发，以及 shell 命令调用    |
+| 什么时候能调用     | 应用安装后即可调用；OOBE 阶段、锁屏状态、省电模式下拒绝触发                           |
+| 支持的 Want 参数 | 通过 `trigger_type` 参数区分触发来源：控制中心（`default_trigger_type`）、快捷键（`hot-key`）等 |
+| 录制后相册跳转     | 通过 AbilityKit 的 StartAbility 拉起 `com.ohos.photos` 播放视频 |
+| 跨进程服务       | 通过 `ServiceExtensionAbility` 提供服务，仅系统内部进程可调用  |
+
+## 编译构建
+
+本工程为多模块 HAR + HAP 应用工程，使用 Hvigor 构建，产物为各设备形态的系统应用包。
+
+### 环境要求
+- OpenHarmony SDK（本工程 compileSdkVersion 为 "26.0.0"，compatibleSdkVersion / targetSdkVersion 为 20）
+- DevEco Studio 或命令行 Hvigor 工具链
+- 系统签名证书（见 `signature/`）
+
+### 编译命令
+
+在工程根目录执行：
+
+```bash
+# 使用 DevEco Studio 打开工程后执行 Build，或使用 hvigor 命令行
+hvigorw assembleHap
+```
+
+
+## 录屏开发
+
+录屏采用 **ArkTS** 语言开发，UI 基于 ArkUI Stage 模型。应用通过 `ServiceExtensionAbility` 接收外部触发事件，通过 `RecordManager` 驱动录制生命周期完成音视频采集，并通过 `WindowManager` / `NotificationManager` 管理录制中的胶囊与录制后的预览窗。开发可参考：[ArkUI 开发概述](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/ui/arkts-ui-development-overview.md)
+
+### 基于已有模块的开发
+
+适用场景：对已有能力做功能定制，例如调整录制参数、修改录制流程、裁剪触发方式、调整 UI 交互等。
+
+**对已有模块的功能修改与裁剪**
+
+1. 明确改动点：按业务边界定位到 `product/phone`（入口与代理）、`feature/screenRecorder`（录制核心）或 `common`（公共能力）。
+
+2. 修改录制参数：
+   - 手机配置位于 `feature/screenRecorder/src/main/ets/manager/config/PhoneRecorderConfigImpl.ets`
+   - 平板配置位于 `feature/screenRecorder/src/main/ets/manager/config/PadRecorderConfigImpl.ets`
+   - PC 配置位于 `feature/screenRecorder/src/main/ets/manager/config/PcRecorderConfigImpl.ets`
+   - 均实现 `RecorderConfigInterface` 接口，通过 `RecordManager.getInstance()` 按设备类型自动选择。
+
+     例如，需修改视频码率，在各配置类中调整 `DEFAULT_VIDEO_BIT_RATE` 常量：
+     ```typescript
+     // PhoneRecorderConfigImpl.ets / PadRecorderConfigImpl.ets / PcRecorderConfigImpl.ets
+     // 【修改点】将视频码率从 12000000 改为 10000000，确保在编码器支持的范围内
+     const DEFAULT_VIDEO_BIT_RATE = 10000000;
+
+     // getVideoConfig() 中引用该常量
+     const config: media.AVScreenCaptureRecordConfig = {
+       videoBitrate: DEFAULT_VIDEO_BIT_RATE,  // → 10000000
+       // ...
+     };
+     ```
+
+3. 修改录制流程：
+   - 核心流程入口位于 `feature/screenRecorder/src/main/ets/manager/RecordManager.ets`
+   - `RecordManager.trigger()` → `startTrigger()` → `recordingNewVideoFile()` 为启动链路
+   - `RecordManager.stop()` 为停止链路
+   - PC 特有覆写位于 `feature/screenRecorder/src/main/ets/manager/PcRecordManager.ets`
+
+     例如，需在录制启动前新增自定义前置检查，可在 `RecordManager.startTrigger()` 中添加相关逻辑：
+     ```typescript
+     // RecordManager.ets — startTrigger 是录制启动入口
+     public async startTrigger(displayId: number | undefined = undefined): Promise<void> {
+       // 【新增自定义前置检查】
+       if (!this.customPreCheck()) {
+         return;
+       }
+
+       // 原有流程：检查存储空间 → 初始化录制器 → 创建视频文件 → startRecording
+       const freeSpace = storageManager.getFreeSizeSync(context.filesDir);
+       if (freeSpace <= MIN_FREE_SPACE_IN_BYTE) {
+         RecorderToast.getInstance().showToast('storageFull_changeto_sdcard_new');
+         return;
+       }
+       this.isRecording = true;
+       await this.recordingNewVideoFile(true);
+     }
+     ```
+
+4. 修改录制状态回调：
+   - 状态回调位于 `RecordManager.setAVScreenCaptureCallback()` 内的 `stateChange` 与 `error` 监听。
+   - `SCREENCAPTURE_STATE_STARTED`：录制启动成功，展示胶囊/通知。
+   - `SCREENCAPTURE_STATE_STOPPED_BY_USER`：用户主动停止，释放资源。
+   - `SCREENCAPTURE_STATE_INTERRUPTED_BY_OTHER`：被其他录制打断，自动停止。
+
+     例如，需在录制被中断时增加自定义上报：
+     ```typescript
+     // RecordManager.ets — setAVScreenCaptureCallback() 中的 stateChange 分支
+     case media.AVScreenCaptureStateCode.SCREENCAPTURE_STATE_INTERRUPTED_BY_OTHER:
+       // 【新增自定义逻辑】记录中断时间与场景
+       this.interruptTime = Date.now();
+       this.reportInterruptEvent();
+       // 原有流程：上报 → 停止 → 杀进程
+       EventReportUtil.setStopType(StopRecordTriggerType.TRIGGERED_TYPE_BY_OTHER_RECORDING);
+       await this.stop();
+       RecorderUtil.postKillProcessMessage();
+       break;
+     ```
+
+5. 修改 UI 组件：
+   - PC 胶囊窗口位于 `feature/screenRecorder/src/main/ets/components/Capsule/index.ets`，布局结构为 `Flex` 容器，内含 `buildMicArea()`（麦克风区）+ 分隔线 + `buildTimerArea()`（计时区与停止按钮）。
+   - 预览窗位于 `feature/screenRecorder/src/main/ets/components/PicturePreviewer/`
+   - 蒙层位于 `feature/screenRecorder/src/main/ets/components/MaskPreviewer/`
+   - 控制中心 UI 位于 `feature/screenRecorder/src/main/ets/components/ScreenRecorderControlPage/`
+   - 业务代理入口位于 `product/phone/src/main/ets/proxy/ExtAbilityProxy.ets`（Phone/Pad）和 `product/pc/src/main/ets/proxy/ExtAbilityProxy.ets`（PC）
+
+     例如，需统一 Phone 和 PC 预览窗的圆角半径，修改 `PicturePreviewer/index.ets` 的 `buildContent()`：
+     ```typescript
+     // PicturePreviewer/index.ets — 预览窗缩略图容器样式
+     .borderRadius(CommonUtil.checkIfDeviceIsPhone()
+       ? $r('app.float.default_corner_radius_s')    // Phone: 8vp
+       : $r('app.float.pc_corner_radius_s'))        // PC: 4vp
+     // 【修改点】统一为 Phone 的圆角值
+     .borderRadius($r('app.float.default_corner_radius_s'))
+     ```
+
+常用修改入口：
+
+| 目标             | 路径 |
+|----------------| ---- |
+| 录制生命周期           | `feature/screenRecorder/src/main/ets/manager/RecordManager.ets` |
+| PC 录制扩展            | `feature/screenRecorder/src/main/ets/manager/PcRecordManager.ets` |
+| 录制配置 (Phone)           | `feature/screenRecorder/src/main/ets/manager/config/PhoneRecorderConfigImpl.ets` |
+| 录制配置 (Pad)          | `feature/screenRecorder/src/main/ets/manager/config/PadRecorderConfigImpl.ets` |
+| 录制配置 (PC)         | `feature/screenRecorder/src/main/ets/manager/config/PcRecorderConfigImpl.ets` |
+| 胶囊 UI (PC) | `feature/screenRecorder/src/main/ets/components/Capsule/` |
+| 预览窗 UI           | `feature/screenRecorder/src/main/ets/components/PicturePreviewer/` |
+| 业务代理入口 (Phone/Pad)         | `product/phone/src/main/ets/proxy/ExtAbilityProxy.ets` |
+| 业务代理入口 (PC) | `product/pc/src/main/ets/proxy/ExtAbilityProxy.ets` |
+
+### 新特性能力的开发
+
+适用场景：新增录制相关能力、扩展胶囊形态、补充差异化交互或适配新设备形态。
+
+> **说明**：当前工程采用 `product + feature + common` 多模块结构，产品入口主要在 `product/phone`、`product/pad`、`product/pc`。新能力一般按现有分层扩展；若新增产品形态 HAP，可在 `product/` 下增加对应目录并在 `build-profile.json5` 中注册。
+
+**步骤1：扩展业务能力（最常见）**
+
+1. 在 `feature/screenRecorder` 中补充 Manager、组件或 Worker 逻辑。
+2. 如涉及录制参数变化，在 `manager/config/` 中新增或扩展配置类，并实现 `RecorderConfigInterface` 接口。
+3. 如涉及 UI 变化，在 `components/` 中补充页面组件，并在对应 `WindowManager` 中添加创建/销毁方法。
+4. 如涉及后台监控，在 `worker/` 中补充 Worker 线程逻辑。
+5. 在 `product/phone/src/ohosTest` 中补充对应 UT / DT 用例，并在测试文件中注册。
+
+**步骤2：配置 / 确认 Ability 入口**
+
+本工程入口已在各产品 `src/main/module.json5` 中声明，扩展能力时通常只需确认权限、Ability 配置是否满足新场景：
+
+```json
+{
+  "module": {
+    "name": "phone",
+    "type": "entry",
+    "srcEntry": "./ets/Application/ScreenRecorderAbilityStage.ets",
+    "mainElement": "ServiceExtAbility",
+    "deviceTypes": [
+      "default",
+      "tablet"
+    ],
+    "abilities": [
+      {
+        "name": "ServiceExtAbility",
+        "srcEntry": "./ets/serviceExtAbility/ServiceExtAbility.ets",
+        "type": "service",
+        "exported": true
+      }
+    ]
+  }
+}
+```
+
+事件入口（`ServiceExtAbility`）典型处理：
+
+```typescript
+// ServiceExtAbility：接收外部触发事件，创建 Proxy 并注册生命周期
+export default class ServiceExtAbility extends ServiceExtensionAbility {
+  private extAbilityProxy: ExtAbilityProxy;
+
+  onCreate(want: Want): void {
+    this.extAbilityProxy = new ExtAbilityProxy(this.context);
+    this.extAbilityProxy.onCreate();
+  }
+
+  onRequest(want: Want, startId: number): void {
+    this.extAbilityProxy.onRequest(want, undefined, false);
+  }
+
+  onDestroy(): void {
+    this.extAbilityProxy.onDestroy();
+  }
+}
+```
+
+**步骤3：定制 UI**
+
+在完成业务能力与 Ability 配置后，按上一节「对已有模块的功能修改与裁剪」中的 UI 组件修改方式扩展胶囊、预览窗、蒙层、控制中心或设置页面即可。
+
+若需新增独立页面：
+1. 在对应模块 `pages/` 下新增页面文件；
+2. 在 `resources/base/profile/main_pages.json` 中声明；
+3. 由 Want 路由或 `WindowManager` 拉起。
+
+## 目录
+
+```text
+screenrecorder
+├── AppScope                                 # 应用级配置与多语言资源
+│   ├── app.json5                            # bundleName、版本号等
+│   └── resources/                           # 全局字符串 / 图标等资源
+├── common                                   # 公共能力层
+│   └── src/main/ets
+│       ├── util/                            # 通用工具，包括日志、打点、偏好设置、全局状态等
+│       └── dfx/trace/                       # 性能 Trace
+├── docs
+│   └── figures/                             # 架构图
+├── feature                                  # 特性层
+│   └── screenRecorder/                      # 录屏核心业务
+│       └── src/main/ets
+│           ├── manager/                     # 录制 / 文件 / 窗口 / 麦克风 / 通知等控制器
+│           │   └── config/                  # 设备录制配置策略 (Phone/Pad/PC)
+│           ├── components/                  # 页面组件，包括胶囊、预览窗、蒙层等
+│           ├── util/                        # 工具类（进程管理、省电模式）
+│           └── worker/                      # Worker 后台线程（文件监控、时间戳）
+├── product                                  # 产品层
+│   ├── phone/                               # 手机形态 HAP
+│   │   └── src/main/ets/
+│   │       ├── Application/                 # AbilityStage
+│   │       ├── Ability/                     # ServiceExtensionAbility / UIAbility
+│   │       ├── pages/                       # 页面（胶囊页、预览页、控制页等）
+│   │       ├── proxy/                       # ExtAbilityProxy 业务代理
+│   │       └── serviceExtAbility/           # ServiceExtensionAbility 入口
+│   ├── pad/                                 # 平板形态 HAP
+│   └── pc/                                  # PC 形态 HAP
+├── signature                                # 签名证书与 profile
+├── build-profile.json5                      # 工程级配置
+├── oh-package.json5
+├── build.sh                                 # CI 构建脚本
+├── OAT.xml                                  # 开源合规审计
+├── LICENSE
+├── README.md                                # 中文说明文档
+└── README_en.md                             # 英文说明文档
+```
+
+## 约束
+
+- **语言版本**：ArkTS
+- **运行形态**：系统预置应用（`com.ohos.screenrecorder`），通过 `ServiceExtensionAbility` 进程运行，依赖音视频采集、媒体库、窗口管理、通知等系统能力
+- **设备类型**：Phone、Pad、PC（见各产品 `module.json5`）
+- **权限**：录屏所需的主要权限如下（见各产品 `module.json5`）
+
+  | 权限 | 授权方式 | 使用场景 |
+  |------|---------|--------|
+  | ohos.permission.CAPTURE_SCREEN | 系统授权 | 屏幕录制音视频采集 |
+  | ohos.permission.MICROPHONE | 系统授权 | 录制时采集麦克风音频 |
+  | ohos.permission.SET_UNREMOVABLE_NOTIFICATION | 系统授权 | 录制中显示不可移除通知 |
+  | ohos.permission.SYSTEM_FLOAT_WINDOW | 系统授权 | PC 浮动胶囊窗口创建 |
+  | ohos.permission.MANAGE_SECURE_SETTINGS | 系统授权 | 系统设置项读写（触控轨迹等） |
+  | ohos.permission.WRITE_IMAGEVIDEO | 系统授权 | 将录制文件写入媒体库 |
+  | ohos.permission.START_ABILITIES_FROM_BACKGROUND | 系统授权 | 后台拉起 Ability |
+
+- **形态适配**：不同设备形态会改变录制分辨率与窗口布局，修改 UI 时需覆盖多形态验证
+
+## 参与贡献
+
+欢迎广大开发者贡献代码、文档等，具体的贡献流程和方式请参见[参与贡献](https://gitcode.com/openharmony/docs/blob/master/zh-cn/contribute/%E5%8F%82%E4%B8%8E%E8%B4%A1%E7%8C%AE.md)。

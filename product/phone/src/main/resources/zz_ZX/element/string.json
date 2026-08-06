@@ -1,0 +1,68 @@
+{
+    "string":[
+        {
+            "name":"request_write_media_permission_reason",
+            "value":"[TS_863589]_need this permission to write screen recorder file into media library."
+        },
+        {
+            "name":"phone_desc",
+            "value":"[TS_863587]_phone product"
+        },
+        {
+            "name":"ScreenRecorderAbility_desc",
+            "value":"[TS_863586]_phone ability"
+        },
+        {
+            "name":"request_microphone_permission_reason",
+            "value":"[TS_863588]_need this permission to record audio from microphone."
+        },
+        {
+            "name":"request_start_ability_background_permission_reason",
+            "value":"[TS_869852]_need this permission to start album from background"
+        },
+        {
+            "name":"ScreenRecorderAbility_label",
+            "value":"[TS_863585]_ScreenRecorder"
+        },
+        {
+            "name":"request_capture_screen_permission_reason",
+            "value":"[TS_869853]_need this permission to capture screen"
+        },
+        {
+            "name":"request_setting_manage_reason",
+            "value":"[TS_928466]_need this permission to set notification unremovable"
+        },
+        {
+            "name":"request_set_notification_unremovable_reason",
+            "value":"[TS_928467]_need this permission to set notification unremovable"
+        },
+        {
+            "name":"request_start_system_dialog",
+            "value":"[TS_932165]_need this permission to start system dialog"
+        },
+        {
+            "name":"request_save_file_permission_reason",
+            "value":"[TS_975845]_need this permission to write screen recorder file into file manager"
+        },
+        {
+            "name":"request_get_bundle_resources_reason",
+            "value":"[TS_993020]_need this permission to get bundle resource"
+        },
+        {
+            "name":"request_set_float_window_reason",
+            "value":"[TS_993019]_need this permission to create float type window"
+        },
+        {
+            "name":"request_setting_missions_reason",
+            "value":"[TS_993018]_need this permission to set window missions"
+        },
+        {
+            "name":"request_subscribe_notification_window_reason",
+            "value":"[TS_1004252]_need this permission to subscribe to the broadcast sent by the notification panel"
+        },
+        {
+            "name":"request_called_below_lock_screen",
+            "value":"[TS_1066641]_need this permission to start picker below lock screen"
+        }
+    ]
+}

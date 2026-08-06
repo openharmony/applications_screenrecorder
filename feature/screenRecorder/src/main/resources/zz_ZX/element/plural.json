@@ -1,0 +1,33 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"other",
+                    "value":"[TS_805284]_When you start a screen recording, all content and actions on the screen will be captured in video form. This feature requires %1$d permissions."
+                },
+                {
+                    "quantity":"zero",
+                    "value":"[TS_805273]_When you start a screen recording, all content and actions on the screen will be captured in video form. This feature requires %1$d permissions."
+                },
+                {
+                    "quantity":"one",
+                    "value":"[TS_805280]_When you start a screen recording, all content and actions on the screen will be captured in video form. This feature requires %1$d permission."
+                },
+                {
+                    "quantity":"few",
+                    "value":"[TS_805287]_When you start a screen recording, all content and actions on the screen will be captured in video form. This feature requires %1$d permissions."
+                },
+                {
+                    "quantity":"many",
+                    "value":"[TS_805275]_When you start a screen recording, all content and actions on the screen will be captured in video form. This feature requires %1$d permissions."
+                },
+                {
+                    "quantity":"two",
+                    "value":"[TS_805274]_When you start a screen recording, all content and actions on the screen will be captured in video form. This feature requires %1$d permissions."
+                }
+            ]
+        }
+    ]
+}

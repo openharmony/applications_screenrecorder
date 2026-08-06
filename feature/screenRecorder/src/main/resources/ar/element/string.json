@@ -1,0 +1,480 @@
+{
+    "string":[
+        {
+            "name":"stop_reason_phone_memory_full_toast",
+            "value":"لقد نفدت مساحة تخزين الهاتف، تم حفظ الفيديو",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cannot_record_during_call_toast",
+            "value":"يتعذر تسجيل الشاشة أثناء إجراء مكالمة.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_name",
+            "value":"حدد محتوى لمشاركته",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_a_screen",
+            "value":"انقر على الشاشة التي تريد تسجيلها",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_track_button",
+            "value":"إظهار آثار اللمس",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_subtitle",
+            "value":"جارٍ تسجيل الشاشة",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"local_permission_reason_mic_1",
+            "value":"يُستخدم هذا الإذن لتسجيل الصوت.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_stop_recording",
+            "value":"إيقاف التسجيل",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"stop_reason_file_changed_toast",
+            "value":"توقف تسجيل الفيديو بسبب تعديل ملف التسجيل أو حذفه",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_storage_description",
+            "value":"يُستخدم هذا الإذن لتخزين تسجيلات الشاشة.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"app_name",
+            "value":"تسجيل الشاشة",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_pc_text",
+            "value":"تم حفظ تسجيل الشاشة في مدير الملفات",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone",
+            "value":"الميكروفون",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_mission",
+            "value":"النافذة",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_privacy_protection",
+            "value":"إخفاء المحتوى الخاص",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_failed_toast",
+            "value":"تعذر التسجيل، يُرجى إعادة المحاولة",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_media_and_files_permission",
+            "value":"الوسائط والملفات",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_title",
+            "value":"إشعار الخصوصية",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_button_share",
+            "value":"بدء المشاركة",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"recorder_file_saved_pc_toast",
+            "value":"تم الحفظ في مدير الملفات",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_interface_toast",
+            "value":"تعرض هذه الشاشة محتوى خاصًا لا يمكن تسجيله",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hw_video_close_mic",
+            "value":"لم يتم تشغيل الميكروفون",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_content",
+            "value":"سيبدأ تطبيق %s في تسجيل محتويات الشاشة. تأكد من حماية المعلومات الخاصة مثل كلمات المرور وتفاصيل الدفع والصور والفيديوهات والدردشات.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"button",
+            "value":"زر",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_text",
+            "value":"تم حفظ تسجيل الشاشة في المعرض.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_screen",
+            "value":"الشاشة",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share",
+            "value":"مشاركة",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_click_info",
+            "value":"بالنقر على «أوافق»، فأنت تعني بذلك موافقتك على هذه البنود.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_cancel",
+            "value":"إلغاء",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_cancel",
+            "value":"إلغاء",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_dialog_Deny",
+            "value":"رفض",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_icon_name",
+            "value":"تسجيل الشاشة",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_agree",
+            "value":"حسنًا",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hw_video_without_voice_2",
+            "value":"الميكروفون قيد الاستخدام",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_title",
+            "value":"هل تسمح لتطبيق %s باستخدام الشاشة؟",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_window_button_back",
+            "value":"رجوع",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_mic_permission",
+            "value":"الميكروفون",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_start_recording",
+            "value":"بدء التسجيل",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_content",
+            "value":"سيكون بمقدور هذا التطبيق تسجيل أو بث كل شيء على شاشتك، بالإضافة إلى أصوات النظام. تأكد من حماية المعلومات الشخصية الحساسة مثل كلمات المرور ومعلومات الدفع والصور والفيديوهات والمحادثات.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_saved_toast",
+            "value":"تم حفظ التسجيل في تطبيق المعرض",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"file_name_illegal",
+            "value":"مشكلة في اسم ملف تسجيل الشاشة",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_Allow",
+            "value":"سماح",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"storageFull_changeto_sdcard_new",
+            "value":"المساحة المتبقية في وحدة التخزين الداخلية غير كافية. لذا، تعذر تسجيل الشاشة. يُرجى حذف بعض الملفات لتفريغ بعض المساحة.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_agree",
+            "value":"أوافق",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone_being_used_toast",
+            "value":"يستخدم تطبيق آخر الميكروفون حاليًا",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cannot_record_voice_during_call_toast",
+            "value":"لا يمكن تسجيل الصوت في أثناء المكالمة",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_off",
+            "value":"موقوف، إظهار النقرات",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_off",
+            "value":"موقوف، الميكروفون",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_on",
+            "value":"قيد التشغيل، الميكروفون",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_on",
+            "value":"قيد التشغيل، إظهار النقرات",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_system_audio",
+            "value":"مشاركة صوت الحاسوب",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_select_upper",
+            "value":"النصف العلوي من الشاشة",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_full",
+            "value":"ملء الشاشة",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_lower",
+            "value":"النصف السفلي من الشاشة",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_window_stop_button",
+            "value":"إنهاء",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app",
+            "value":"إخفاء محتوى التطبيق الخاص",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_system",
+            "value":"إخفاء نوافذ النظام",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_system_content",
+            "value":"يسري على الإشعارات، وطرق الإدخال، وغيرها.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_title",
+            "value":"يستخدم تطبيق %s الشاشة",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app_content",
+            "value":"يسري على تطبيقات الدفع، والرسائل النصية، وغيرها.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_pc_text",
+            "value":"تم الحفظ في مدير الملفات.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_text",
+            "value":"تم الحفظ في المعرض",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_off",
+            "value":"%s، موقوف",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_on",
+            "value":"%s، قيد التشغيل",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"mic_is_unavailable",
+            "value":"الميكروفون غير مُتاح",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_record_toast",
+            "value":"تحتوي الشاشة على محتوى خاص، ولن يتم تضمينها في التسجيل",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_audio",
+            "value":"مشاركة الصوت",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+      {
+        "name": "select_this_display_to_recorder",
+        "value": "انقر هنا لتسجيل هذه الشاشة",
+        "attr": {
+          "priority": "translate"
+        }
+        }
+    ]
+}

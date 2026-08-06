@@ -1,0 +1,11 @@
+{
+    "string":[
+        {
+            "name":"app_name",
+            "value":"Bildschirmrekorder",
+            "attr":{
+                "priority":"translate"
+            }
+        }
+    ]
+}

@@ -1,0 +1,480 @@
+{
+    "string":[
+        {
+            "name":"local_permission_reason_mic_1",
+            "value":"Per registrare l'audio.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_storage_description",
+            "value":"Per memorizzare le registrazioni dello schermo.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone",
+            "value":"Microfono",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_media_and_files_permission",
+            "value":"Contenuti multimediali e file",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"mic_is_unavailable",
+            "value":"Microfono non disponibile.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_click_info",
+            "value":"Toccando ACCETTA, aderirai a questi termini.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_cancel",
+            "value":"Annulla",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_mic_permission",
+            "value":"Microfono",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_saved_toast",
+            "value":"Registrazione salvata in Galleria.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_agree",
+            "value":"Accetta",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"cannot_record_during_call_toast",
+            "value":"Impossibile registrare lo schermo durante una chiamata.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"stop_reason_phone_memory_full_toast",
+            "value":"Memoria dispositivo in esaurimento. Il video è stato salvato.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_pc_text",
+            "value":"Salvato in Gestione file.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_name",
+            "value":"Seleziona il contenuto da condividere",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_a_screen",
+            "value":"Tocca la schermata che desideri registrare",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_track_button",
+            "value":"Mostra tracce del tocco",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_subtitle",
+            "value":"Registrazione schermo in corso",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_text",
+            "value":"Salvato nella Galleria",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_stop_recording",
+            "value":"Interrompi registrazione",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"stop_reason_file_changed_toast",
+            "value":"Registrazione video interrotta. La registrazione è stata modificata o eliminata.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_off",
+            "value":"Disattivato, mostra tocchi",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_off",
+            "value":"Disattivato, microfono",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_off",
+            "value":"%s, disattivato",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"app_name",
+            "value":"Registra schermo",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_pc_text",
+            "value":"Registrazione schermo salvata in Gestione file",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_upper",
+            "value":"Metà superiore dello schermo",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_mission",
+            "value":"Finestra",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_privacy_protection",
+            "value":"Nascondi i contenuti privati",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_failed_toast",
+            "value":"Registrazione non riuscita. Riprova.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_title",
+            "value":"Informativa sulla Privacy",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_full",
+            "value":"Schermo intero",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_button_share",
+            "value":"Inizia a condividere",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"recorder_file_saved_pc_toast",
+            "value":"Salvato in Gestione file.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_interface_toast",
+            "value":"Questa schermata contiene contenuti privati e non verrà registrata.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hw_video_close_mic",
+            "value":"Microfono non acceso.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_stop_button",
+            "value":"Termina",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_content",
+            "value":"%s inizierà ad acquisire i contenuti dello schermo. Assicurati di proteggere le informazioni private come password, dati di pagamento, foto, video e chat.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"button",
+            "value":"Tasto",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_text",
+            "value":"Registrazione schermo salvata nella Galleria.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_screen",
+            "value":"Schermo",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share",
+            "value":"Condividi",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_cancel",
+            "value":"Annulla",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_protect_app",
+            "value":"Nascondi i contenuti privati delle app",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"share_system_audio",
+            "value":"Condividi audio del computer",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_dialog_Deny",
+            "value":"Nega",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_icon_name",
+            "value":"Registra schermo",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_agree",
+            "value":"OK",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_protect_system",
+            "value":"Nascondi finestre di sistema",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"microphone_being_used_toast",
+            "value":"Un'altra app sta utilizzando il microfono.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_select_lower",
+            "value":"Metà inferiore dello schermo",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_on",
+            "value":"Attivato, microfono",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_protect_system_content",
+            "value":"Si applica alle notifiche, ai metodi di immissione dati e altro ancora.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_title",
+            "value":"%s sta utilizzando la schermata",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hw_video_without_voice_2",
+            "value":"Microfono in uso.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_title",
+            "value":"Vuoi consentire a %s di utilizzare lo schermo?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_window_button_back",
+            "value":"Indietro",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_on",
+            "value":"Attivato, mostra tocchi",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_start_recording",
+            "value":"Avvia registrazione",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app_content",
+            "value":"Si applica alle app di pagamento, agli SMS e altro ancora.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_content",
+            "value":"Questa app sarà in grado di registrare o riprodurre tutto ciò che appare sullo schermo, compresi i suoni di sistema. Assicurati di proteggere le informazioni personali sensibili come password, dati di pagamento, foto, video e conversazioni.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"already_on",
+            "value":"%s, attivato",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"file_name_illegal",
+            "value":"Errore del nome del file di registrazione schermo.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_Allow",
+            "value":"Consenti",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cannot_record_voice_during_call_toast",
+            "value":"Impossibile registrare l'audio durante una chiamata.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"storageFull_changeto_sdcard_new",
+            "value":"Impossibile registrare lo schermo a causa dello spazio insufficiente nella memoria interna. Elimina dei file per liberare spazio.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_record_toast",
+            "value":"La schermata presenta contenuti privati. Non verrà inclusa nella registrazione.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_audio",
+            "value":"Condividi audio",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+      {
+        "name": "select_this_display_to_recorder",
+        "value": "Tocca per registrare questa schermata",
+        "attr": {
+          "priority": "translate"
+        }
+        }
+    ]
+}

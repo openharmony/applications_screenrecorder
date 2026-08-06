@@ -1,0 +1,74 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "material": {
+          "storeFile": "signature/OpenHarmony.p12",
+          "storePassword": "00000016DDB3EBEFD44C7C2941CE0F3A0AEA5BE720E1796E0F74345902738EEFB35370C38AD5",
+          "keyAlias": "OpenHarmony Application Release",
+          "keyPassword": "0000001612A541A103A14479DF39D9AAEC65D9D878AFA993601449D2FB2F49C1D6CEB1191E65",
+          "signAlg": "SHA256withECDSA",
+          "profile": "signature/OpenHarmony.p7b",
+          "certpath": "signature/OpenHarmony.cer"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compileSdkVersion": "26.0.0",
+        "compatibleSdkVersion": 20,
+        "targetSdkVersion": 20,
+        "runtimeOS": "OpenHarmony"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "phone",
+      "srcPath": "./product/phone",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pad",
+      "srcPath": "./product/pad",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "common",
+      "srcPath": "./common"
+    },
+    {
+      "name": "screenRecorder",
+      "srcPath": "./feature/screenRecorder"
+    },
+    {
+      "name": "pc",
+      "srcPath": "./product/pc",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

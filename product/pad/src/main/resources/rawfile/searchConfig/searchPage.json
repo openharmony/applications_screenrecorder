@@ -1,0 +1,24 @@
+{
+  "version": {
+    "curVersion": "1.0.1"
+  },
+  "searchPages": [
+    {
+      "pageTitle": "$string:screen_recorder_setting",
+      "pageDescription": "",
+      "entryKey": "item_screen_recorder_switch",
+      "params": "",
+      "path": [
+        "$string:system_title",
+        "$string:quick_gestures",
+        "$string:screen_recorder_setting"
+      ],
+      "searchItems": [
+        {
+          "itemName": "screen_recorder_setting_title",
+          "itemTitle": "$string:screen_recorder_setting"
+        }
+      ]
+    }
+  ]
+}

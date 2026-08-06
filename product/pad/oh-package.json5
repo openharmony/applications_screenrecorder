@@ -1,0 +1,11 @@
+{
+  "license": "ISC",
+  "devDependencies": {},
+  "name": "pad",
+  "description": "Screen recorder on the phone",
+  "version": "1.0.0",
+  "dependencies": {
+    "@ohos/screen-recorder": "file:../../feature/screenRecorder",
+    "@ohos/common": "file:../../common"
+  }
+}

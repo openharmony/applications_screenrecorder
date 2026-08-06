@@ -1,0 +1,22 @@
+{
+  "insightIntents": [
+    {
+      "intentName": "ScreenRecord",
+      "domain": "ScreenRecordDomain",
+      "intentVersion": "1.0.1",
+      "srcEntry": "./ets/Insightintents/ScreenRecorderIntentExecutorImpl.ets",
+      "serviceExtension": {
+        "ability": "com.ohos.screenrecorder.ServiceExtAbility"
+      }
+    },
+    {
+      "intentName": "StopScreenRecord",
+      "domain": "ScreenRecordDomain",
+      "intentVersion": "1.0.1",
+      "srcEntry": "./ets/Insightintents/ScreenRecorderIntentExecutorImpl.ets",
+      "serviceExtension": {
+        "ability": "com.ohos.screenrecorder.ServiceExtAbility"
+      }
+    }
+  ]
+}

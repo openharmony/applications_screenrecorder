@@ -1,0 +1,8 @@
+{
+  "string": [
+    {
+      "name": "status_bar_pc_screenrecorder",
+      "value": "{\"pluginSlot\":\"status_bar_pc_screenrecorder\",\"pluginDeviceType\":\"2in1\",\"pluginTemplateName\":\"pages/PluginStatusBarScreenRecorder.js\",\"pluginBackTemplateName\":\"pages/PluginStatusBarWhiteScreenRecorder.js\",\"pluginIconType\":\"small\",\"pluginPosition\":\"right\",\"pluginPriority\":\"2\",\"pluginType\":\"immediately\",\"clickInfo\": {\"clickType\":\"custom\",\"abilityType\":\"service_extension\",\"abilityName\":\"com.ohos.screenrecorder.DockBarExtAbility\"}}"
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+    "string":[
+        {
+            "name":"cannot_record_during_call_toast",
+            "value":"No es posible grabar la pantalla durante una llamada.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"stop_reason_phone_memory_full_toast",
+            "value":"Poco espacio de almacenamiento en el dispositivo. El vídeo se ha guardado.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_window_name",
+            "value":"Seleccionar contenido para compartir",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_a_screen",
+            "value":"Pulsa la pantalla que quieres grabar",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_track_button",
+            "value":"Mostrar mis pulsaciones en la pantalla",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_subtitle",
+            "value":"Grabando pantalla",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"local_permission_reason_mic_1",
+            "value":"Se utiliza para grabar sonido.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_stop_recording",
+            "value":"Detener grabación",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"stop_reason_file_changed_toast",
+            "value":"Se ha detenido la grabación de vídeo. Se ha modificado o eliminado la grabación.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_storage_description",
+            "value":"Se utiliza para almacenar grabaciones de pantalla.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"app_name",
+            "value":"Grabación de pantalla",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_pc_text",
+            "value":"Grabación de pantalla guardada en Archivos",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone",
+            "value":"Micrófono",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_mission",
+            "value":"Ventana",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_privacy_protection",
+            "value":"Ocultar contenido privado",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_failed_toast",
+            "value":"Error al grabar. Vuelve a intentarlo.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_media_and_files_permission",
+            "value":"Multimedia y archivos",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_title",
+            "value":"Aviso de privacidad",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_button_share",
+            "value":"Comenzar a compartir",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"recorder_file_saved_pc_toast",
+            "value":"Se ha guardado en Archivos.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_interface_toast",
+            "value":"Esta pantalla incluye contenido privado y no se puede grabar.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hw_video_close_mic",
+            "value":"El Micrófono no está activado.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_content",
+            "value":"%s comenzará a capturar el contenido de la pantalla. Asegúrate de proteger la información privada, como contraseñas, detalles de pago, fotos, vídeos y chats.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"button",
+            "value":"Botón",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_text",
+            "value":"Grabación de pantalla guardada en Galería.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_screen",
+            "value":"Pantalla",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share",
+            "value":"Compartir",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_click_info",
+            "value":"Al pulsar ACEPTO, usted acepta estas condiciones.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_cancel",
+            "value":"Cancelar",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_cancel",
+            "value":"Cancelar",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_dialog_Deny",
+            "value":"Denegar",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_icon_name",
+            "value":"Grabación de pantalla",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_agree",
+            "value":"Aceptar",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hw_video_without_voice_2",
+            "value":"El Micrófono está en uso.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_title",
+            "value":"¿Permitir que %s use tu pantalla?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_window_button_back",
+            "value":"Volver",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_mic_permission",
+            "value":"Micrófono",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_start_recording",
+            "value":"Iniciar grabación",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_content",
+            "value":"Esta aplicación podrá grabar o transmitir todo lo que aparezca en tu pantalla, así como los sonidos del sistema. Asegúrate de proteger la información personal confidencial, como contraseñas, información de pago, fotos, vídeos y conversaciones.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_saved_toast",
+            "value":"Grabación guardada en Galería",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"file_name_illegal",
+            "value":"Error de nombre de archivo de grabación de pantalla.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_Allow",
+            "value":"Permitir",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"storageFull_changeto_sdcard_new",
+            "value":"No se ha podido grabar la pantalla por espacio insuficiente en el almacenamiento interno. Elimina algunos archivos para liberar espacio.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_agree",
+            "value":"Acepto",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone_being_used_toast",
+            "value":"Otra aplicación está usando el micrófono.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cannot_record_voice_during_call_toast",
+            "value":"No se puede grabar audio durante una llamada.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_off",
+            "value":"Desactivado, mostrar pulsaciones",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_off",
+            "value":"Desactivado, micrófono",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_on",
+            "value":"Activado, micrófono",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_on",
+            "value":"Activado, mostrar pulsaciones",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_system_audio",
+            "value":"Compartir audio del ordenador",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_select_upper",
+            "value":"Mitad superior de la pantalla",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_full",
+            "value":"Pantalla completa",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_lower",
+            "value":"Mitad inferior de la pantalla",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_window_stop_button",
+            "value":"Finalizar",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app",
+            "value":"Ocultar contenido privado de la aplicación",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_system",
+            "value":"Ocultar ventanas del sistema",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_system_content",
+            "value":"Se aplica a notificaciones, métodos de entrada y más.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_title",
+            "value":"%s está usando la pantalla",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app_content",
+            "value":"Se aplica a aplicaciones para pagos, SMS y más.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_pc_text",
+            "value":"Se ha guardado en Archivos.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_text",
+            "value":"Se ha guardado en Galería",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_off",
+            "value":"%s, desactivado",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_on",
+            "value":"%s, activado",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"mic_is_unavailable",
+            "value":"El Micrófono no está disponible.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_record_toast",
+            "value":"La pantalla contiene contenido privado. No se incluirá en la grabación.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_audio",
+            "value":"Compartir audio",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+      {
+        "name": "select_this_display_to_recorder",
+        "value": "Pulsa para grabar esta pantalla",
+        "attr": {
+          "priority": "translate"
+        }
+        }
+    ]
+}

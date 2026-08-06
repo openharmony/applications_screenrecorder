@@ -1,0 +1,480 @@
+{
+    "string":[
+        {
+            "name":"cannot_record_during_call_toast",
+            "value":"전화를 거는 동안에는 화면을 녹화할 수 없습니다.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"stop_reason_phone_memory_full_toast",
+            "value":"장치 저장 공간이 부족합니다. 비디오가 저장되었습니다.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_window_name",
+            "value":"공유할 콘텐츠 선택",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_a_screen",
+            "value":"녹화할 화면을 탭합니다",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_track_button",
+            "value":"터치 흔적 표시",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_subtitle",
+            "value":"화면 녹화 중",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"local_permission_reason_mic_1",
+            "value":"이 권한은 소리를 녹음하는 데 사용됩니다.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_stop_recording",
+            "value":"녹화 중단",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"stop_reason_file_changed_toast",
+            "value":"비디오 녹화가 중단되었습니다. 녹화가 수정되었거나 삭제되었습니다.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_storage_description",
+            "value":"이 권한은 화면 녹화를 저장하는 데 사용됩니다.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"app_name",
+            "value":"화면 녹화",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_pc_text",
+            "value":"화면 녹화가 파일에 저장됨",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone",
+            "value":"마이크",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_mission",
+            "value":"창",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_privacy_protection",
+            "value":"비공개 콘텐츠 숨기기",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_failed_toast",
+            "value":"녹화에 실패했습니다. 다시 시도하십시오.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_media_and_files_permission",
+            "value":"미디어 및 파일",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_title",
+            "value":"개인 정보 보호 공지",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_button_share",
+            "value":"공유 시작",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"recorder_file_saved_pc_toast",
+            "value":"파일에 저장되었습니다.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_interface_toast",
+            "value":"이 화면에는 비공개 정보 콘텐츠가 포함되어 있으므로 녹화되지 않습니다.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hw_video_close_mic",
+            "value":"마이크가 켜지지 않았습니다.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_content",
+            "value":"%s 앱에서 화면 콘텐츠 캡처를 시작합니다. 암호, 결제 정보, 사진, 비디오, 채팅 등의 비공개 정보를 안전하게 보호하시기 바랍니다.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"button",
+            "value":"버튼",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_text",
+            "value":"화면 녹화가 갤러리에 저장되었습니다.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_screen",
+            "value":"화면",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share",
+            "value":"공유",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_click_info",
+            "value":"동의를 터치하면 이러한 약관에 동의하게 됩니다.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_cancel",
+            "value":"취소",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_cancel",
+            "value":"취소",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_dialog_Deny",
+            "value":"거부",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_icon_name",
+            "value":"화면 녹화",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_agree",
+            "value":"확인",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"hw_video_without_voice_2",
+            "value":"마이크가 사용 중입니다.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_title",
+            "value":"%s의 화면 사용을 허용하시겠습니까?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_window_button_back",
+            "value":"뒤로 가기",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_mic_permission",
+            "value":"마이크",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_start_recording",
+            "value":"녹화 시작",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_content",
+            "value":"이 앱은 화면에 표시되는 모든 내용 및 시스템 사운드를 기록하거나 방송할 수 있게 됩니다. 암호, 결제 정보, 사진, 비디오, 대화 등 민감한 개인정보를 안전하게 보호하시기 바랍니다.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_saved_toast",
+            "value":"녹화 파일이 갤러리에 저장됨.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"file_name_illegal",
+            "value":"화면 녹화 파일 이름 오류입니다.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_Allow",
+            "value":"허용",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"storageFull_changeto_sdcard_new",
+            "value":"내부 저장소의 공간이 부족합니다. 화면을 녹화할 수 없습니다. 일부 파일을 삭제하여 여유 공간을 확보하세요.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_agree",
+            "value":"동의",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone_being_used_toast",
+            "value":"다른 앱에서 마이크를 사용 중입니다.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cannot_record_voice_during_call_toast",
+            "value":"통화 중에는 오디오를 녹음할 수 없습니다.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_off",
+            "value":"꺼짐, 터치 표시",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_off",
+            "value":"꺼짐, 마이크",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_on",
+            "value":"켜짐, 마이크",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_on",
+            "value":"켜짐, 터치 표시",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_system_audio",
+            "value":"컴퓨터 오디오 공유",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_select_upper",
+            "value":"화면 상단부",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_full",
+            "value":"전체 화면",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_lower",
+            "value":"화면 하반부",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_window_stop_button",
+            "value":"종료",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app",
+            "value":"비공개 앱 콘텐츠 숨기기",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_system",
+            "value":"시스템 창 숨기기",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_system_content",
+            "value":"알림, 입력 방법 등에 적용됩니다.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_title",
+            "value":"%s 앱에서 화면 사용 중",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app_content",
+            "value":"결제 앱, SMS 등에 적용됩니다.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_pc_text",
+            "value":"파일에 저장되었습니다.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_text",
+            "value":"갤러리에 저장됨",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_off",
+            "value":"%s, 꺼짐",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_on",
+            "value":"%s, 켜짐",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"mic_is_unavailable",
+            "value":"마이크를 사용할 수 없습니다.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_record_toast",
+            "value":"화면에 비공개 콘텐츠가 포함되어 있습니다. 녹화에 포함되지 않습니다.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_audio",
+            "value":"오디오 공유",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+      {
+        "name": "select_this_display_to_recorder",
+        "value": "탭하여 이 화면 녹화",
+        "attr": {
+          "priority": "translate"
+        }
+        }
+    ]
+}

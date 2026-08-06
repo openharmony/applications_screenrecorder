@@ -1,0 +1,23 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"one",
+                    "value":"Al iniciar una grabación de pantalla, todo el contenido y las acciones en la pantalla se capturarán en forma de vídeo. Esta función requiere %1$d permiso.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                },
+                {
+                    "quantity":"other",
+                    "value":"Al iniciar una grabación de pantalla, todo el contenido y las acciones en la pantalla se capturarán en forma de vídeo. Esta función requiere %1$d permisos.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"other",
+                    "value":"Ketika Anda memulai perekaman layar, semua konten dan tindakan di layar akan ditangkap dalam bentuk video. Fitur ini memerlukan %1$d izin.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}

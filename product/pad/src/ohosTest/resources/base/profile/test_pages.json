@@ -1,0 +1,7 @@
+{
+  "src": [
+    "testability/pages/CapsulePage",
+    "testability/pages/PreviewPage",
+    "testability/pages/TestPage"
+  ]
+}

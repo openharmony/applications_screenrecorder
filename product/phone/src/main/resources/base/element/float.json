@@ -1,0 +1,80 @@
+{
+  "float": [
+    {
+      "name": "text_checkbox_size",
+      "value": "24vp"
+    },
+    {
+      "name": "text_line_size",
+      "value": "48vp"
+    },
+    {
+      "name": "text_line_padding",
+      "value": "4vp"
+    },
+    {
+      "name": "privacy_window_content",
+      "value": "12vp"
+    },
+    {
+      "name": "select_window_button_share_margin",
+      "value": "16vp"
+    },
+    {
+      "name": "select_window_button_share_height",
+      "value": "40vp"
+    },
+    {
+      "name": "app_icon_size",
+      "value": "32vp"
+    },
+    {
+      "name": "app_screen_text_margin",
+      "value": "13vp"
+    },
+    {
+      "name": "app_icon_margin",
+      "value": "13vp"
+    },
+    {
+      "name": "app_mission_Label_left",
+      "value": "50vp"
+    },
+    {
+      "name": "list_margin_16",
+      "value": "16vp"
+    },
+    {
+      "name": "list_margin_28",
+      "value": "28vp"
+    },
+    {
+      "name": "list_padding_12",
+      "value": "12vp"
+    },
+    {
+      "name": "list_margin_10",
+      "value": "10vp"
+    },
+    {
+      "name": "list_margin_8",
+      "value": "8vp"
+    },
+    {
+      "name": "list_margin_12",
+      "value": "12vp"
+    },
+    {
+      "name": "list_margin_4",
+      "value": "4vp"
+    },
+    {
+      "name": "privacy_window_content_top",
+      "value": "8vp"
+    },
+    {
+      "name": "select_window_button_share_paddingTop",
+      "value": "12vp"
+    }
+  ]
+}
