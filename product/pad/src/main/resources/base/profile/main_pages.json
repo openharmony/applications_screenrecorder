@@ -1,0 +1,13 @@
+{
+  "src": [
+    "pages/CapsulePage",
+    "pages/PreviewPage",
+    "pages/MaskPage",
+    "pages/DialogPage",
+    "pages/ScreenRecorderControlPage",
+    "pages/EmptyPage",
+    "pages/SelectWindowPage",
+    "pages/ScreenRecorderPage",
+    "pages/PrivacyControlPage"
+  ]
+}

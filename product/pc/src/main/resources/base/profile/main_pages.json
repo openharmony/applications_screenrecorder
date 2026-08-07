@@ -1,0 +1,11 @@
+{
+  "src": [
+    "pages/CapsulePage",
+    "pages/PreviewPage",
+    "pages/MaskPage",
+    "pages/DialogPage",
+    "pages/EmptyPage",
+    "pages/SelectWindowPage",
+    "pages/ScreenRecorderSelectPanel"
+  ]
+}

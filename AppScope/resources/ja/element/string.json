@@ -1,0 +1,11 @@
+{
+    "string":[
+        {
+            "name":"app_name",
+            "value":"スクリーン録画",
+            "attr":{
+                "priority":"LT"
+            }
+        }
+    ]
+}

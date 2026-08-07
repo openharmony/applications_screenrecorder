@@ -1,0 +1,23 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"one",
+                    "value":"Lorsque vous lancez une capture vidéo d'écran, l'ensemble du contenu et des actions affichés à l'écran seront capturés sous forme de vidéo. Cette fonctionnalité a besoin d'%1$d autorisation.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                },
+                {
+                    "quantity":"other",
+                    "value":"Lorsque vous lancez une capture vidéo d'écran, l'ensemble du contenu et des actions affichés à l'écran seront capturés sous forme de vidéo. Cette fonctionnalité a besoin de %1$d autorisations.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}

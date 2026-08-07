@@ -1,0 +1,480 @@
+{
+    "string":[
+        {
+            "name":"local_permission_reason_mic_1",
+            "value":"Ini digunakan untuk merekam suara.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_storage_description",
+            "value":"Ini digunakan untuk menyimpan rekaman layar.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone",
+            "value":"Mik",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_media_and_files_permission",
+            "value":"Media dan file",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"mic_is_unavailable",
+            "value":"Mikrofon tidak tersedia.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_click_info",
+            "value":"Dengan menyentuh SETUJU, Anda menyetujui persyaratan ini.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_cancel",
+            "value":"Batal",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_mic_permission",
+            "value":"Mikrofon",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_saved_toast",
+            "value":"Rekaman disimpan ke Galeri.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_agree",
+            "value":"Setuju",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"cannot_record_during_call_toast",
+            "value":"Tidak dapat merekam layar dalam panggilan.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"stop_reason_phone_memory_full_toast",
+            "value":"Penyimpanan perangkat rendah. Video telah disimpan.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_pc_text",
+            "value":"Disimpan ke File.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_name",
+            "value":"Pilih konten yang akan dibagikan",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_a_screen",
+            "value":"Ketuk layar yang ingin Anda rekam",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_track_button",
+            "value":"Tampilkan jejak sentuhan",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_subtitle",
+            "value":"Merekam layar",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_text",
+            "value":"Disimpan ke Galeri",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_stop_recording",
+            "value":"Berhenti merekam",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"stop_reason_file_changed_toast",
+            "value":"Perekaman video dihentikan. Perekaman diubah atau dihapus.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_off",
+            "value":"Mati, tampilkan sentuhan",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_off",
+            "value":"Mati, mikrofon",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_off",
+            "value":"%s, mati",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"app_name",
+            "value":"Perekam layar",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_pc_text",
+            "value":"Rekaman layar disimpan ke File",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_upper",
+            "value":"Tengah atas layar",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_mission",
+            "value":"Jendela",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_privacy_protection",
+            "value":"Sembunyikan konten privat",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_failed_toast",
+            "value":"Perekaman gagal. Coba lagi.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_title",
+            "value":"Pemberitahuan privasi",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_full",
+            "value":"Layar penuh",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_button_share",
+            "value":"Mulai berbagi",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"recorder_file_saved_pc_toast",
+            "value":"Disimpan ke File.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_interface_toast",
+            "value":"Layar ini mengandung konten privat dan tidak akan direkam.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hw_video_close_mic",
+            "value":"Mikrofon tidak dihidupkan.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_stop_button",
+            "value":"Akhiri",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_content",
+            "value":"%s akan mulai mengambil konten layar Anda. Pastikan untuk melindungi informasi pribadi, seperti kata sandi, perincian pembayaran, foto, video, dan obrolan.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"button",
+            "value":"Tombol",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_text",
+            "value":"Rekaman layar disimpan ke Galeri.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_screen",
+            "value":"Layar",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share",
+            "value":"Berbagi",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_cancel",
+            "value":"Batal",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_protect_app",
+            "value":"Sembunyikan konten aplikasi privat",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"share_system_audio",
+            "value":"Berbagi audio komputer",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_dialog_Deny",
+            "value":"Tolak",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_icon_name",
+            "value":"Perekam layar",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_agree",
+            "value":"OK",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_protect_system",
+            "value":"Sembunyikan jendela sistem",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"microphone_being_used_toast",
+            "value":"Aplikasi lain sedang menggunakan mikrofon.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_select_lower",
+            "value":"Tengah bawah layar",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_on",
+            "value":"Hidup, mikrofon",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_protect_system_content",
+            "value":"Berlaku untuk notifikasi, metode masukan, dan lainnya.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_title",
+            "value":"%s sedang menggunakan layar",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hw_video_without_voice_2",
+            "value":"Mikrofon sedang digunakan.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_title",
+            "value":"Izinkan %s untuk menggunakan layar?",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_window_button_back",
+            "value":"Kembali",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_on",
+            "value":"Hidup, tampilkan sentuhan",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_start_recording",
+            "value":"Mulai merekam",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app_content",
+            "value":"Berlaku untuk aplikasi pembayaran, SMS, dan lainnya.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_content",
+            "value":"Aplikasi ini akan dapat merekam atau menyiarkan semua yang ada di layar Anda, serta suara sistem. Pastikan untuk melindungi informasi pribadi yang sensitif, seperti kata sandi, informasi pembayaran, foto, video, dan percakapan.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"already_on",
+            "value":"%s, hidup",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"file_name_illegal",
+            "value":"Kesalahan nama file rekaman layar.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_Allow",
+            "value":"Izinkan",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cannot_record_voice_during_call_toast",
+            "value":"Tidak dapat merekam audio saat panggilan berlangsung.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"storageFull_changeto_sdcard_new",
+            "value":"Tidak dapat merekam layar karena kurangnya ruang di penyimpanan internal. Hapus file untuk mengosongkan ruang.",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_record_toast",
+            "value":"Layar mengandung konten privat. Tidak akan disertakan dalam rekaman.",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_audio",
+            "value":"Berbagi audio",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+      {
+        "name": "select_this_display_to_recorder",
+        "value": "Ketuk untuk merekam layar ini",
+        "attr": {
+          "priority": "translate"
+        }
+        }
+    ]
+}

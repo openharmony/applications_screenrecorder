@@ -1,0 +1,23 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"one",
+                    "value":"Wenn Sie eine Bildschirmaufnahme starten, werden alle Inhalte und Aktionen auf dem Bildschirm in Form eines Videos aufgezeichnet. Diese Funktion erfordert %1$d Berechtigung.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                },
+                {
+                    "quantity":"other",
+                    "value":"Wenn Sie eine Bildschirmaufnahme starten, werden alle Inhalte und Aktionen auf dem Bildschirm in Form eines Videos aufgezeichnet. Diese Funktion erfordert %1$d Berechtigungen.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}

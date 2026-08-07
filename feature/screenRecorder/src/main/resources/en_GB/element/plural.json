@@ -1,0 +1,23 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"one",
+                    "value":"When you start a screen recording, all content and actions on the screen will be captured in video form. This feature requires %1$d permission.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                },
+                {
+                    "quantity":"other",
+                    "value":"When you start a screen recording, all content and actions on the screen will be captured in video form. This feature requires %1$d permissions.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}

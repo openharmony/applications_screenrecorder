@@ -1,0 +1,11 @@
+{
+    "string":[
+        {
+            "name":"app_name",
+            "value":"ตัวบันทึกหน้าจอ",
+            "attr":{
+                "priority":"translate"
+            }
+        }
+    ]
+}

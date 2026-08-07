@@ -1,0 +1,16 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"other",
+                    "value":"Khi bạn bắt đầu quay phim màn hình, tất cả nội dung và hành động trên màn hình sẽ được ghi lại dưới dạng video. Tính năng này yêu cầu %1$d quyền.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "string":[
+        {
+            "name":"app_name",
+            "value":"မျက်နှာပြင် မှတ်တမ်း",
+            "attr":{
+                "priority":"translate"
+            }
+        }
+    ]
+}

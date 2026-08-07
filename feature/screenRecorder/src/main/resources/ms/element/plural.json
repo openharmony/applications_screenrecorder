@@ -1,0 +1,16 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"other",
+                    "value":"Apabila anda memulakan rakaman skrin, semua kandungan dan tindakan pada skrin akan ditangkap dalam bentuk video. Ciri ini memerlukan %1$d kebenaran.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}

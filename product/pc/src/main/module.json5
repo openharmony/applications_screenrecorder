@@ -1,0 +1,281 @@
+{
+  "module": {
+    "name": "pc",
+    "type": "entry",
+    "srcEntry": "./ets/Application/ScreenRecorderAbilityStage.ets",
+    "description": "$string:phone_desc",
+    "mainElement": "com.ohos.screenrecorder.ServiceExtAbility",
+    "deviceTypes": [
+      "2in1"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "metadata": [
+      {
+        "name": "ArkTSPartialUpdate",
+        "value": "true"
+      },
+      {
+        "name": "partialUpdateStrictCheck",
+        "value": "warn"
+      },
+      {
+        "name": "action.settings.search.path",
+        "value": "searchConfig/searchPage.json"
+      },
+      {
+        "name": "license_file_path",
+        "value": "/system/etc/noticeFile/ScreenRecorder_OpenSource.html"
+      }
+    ],
+    "abilities": [
+      {
+        "name": "ShareUIAbility",
+        "srcEntry": "./ets/Ability/ShareUIAbility.ets",
+        "description": "$string:phone_desc",
+        "exported": false,
+        "startWindowIcon": "$media:icon_transparent",
+        "startWindowBackground": "$color:transparent",
+        "removeMissionAfterTerminate": true
+      },
+      {
+        "name": "SelectWindowAbility",
+        "srcEntry": "./ets/Ability/SelectWindowAbility.ets",
+        "description": "$string:phone_desc",
+        "label": "$string:app_name",
+        "icon": "$media:screenrecorder_icon",
+        "startWindow": "$profile:start_window",
+        "startWindowIcon": "$media:icon",
+        "startWindowBackground": "$color:white",
+        "exported": true,
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "ohos.want.action.home"
+            ]
+          }
+        ],
+        "minWindowWidth": 840,
+        "minWindowHeight": 560,
+        "permissions": [
+          "ohos.permission.CAPTURE_SCREEN"
+        ]
+      }
+    ],
+    "extensionAbilities": [
+      {
+        "skills": [
+          {
+            "actions": [
+              "action.systemui.plugin.STATUS_BAR"
+            ]
+          }
+        ],
+        "name": "com.ohos.screenrecorder.DockBarExtAbility",
+        "icon": "$media:screenrecorder_icon",
+        "label": "$string:app_name",
+        "exported": false,
+        "srcEntry": "./ets/serviceExtAbility/DockBarExtAbility.ets",
+        "description": "$string:ScreenRecorderAbility_desc",
+        "metadata": [
+          {
+            "name": "action.systemui.plugin.STATUS_BAR",
+            "value": "status_bar_pc_screenrecorder"
+          }
+        ],
+        "type": "service"
+      },
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "com.ohos.systemui.action.TOGGLE",
+              "action.system.home"
+            ]
+          }
+        ],
+        "visible": true,
+        "name": "com.ohos.screenrecorder.ServiceExtAbility",
+        "icon": "$media:screenrecorder_icon",
+        "label": "$string:app_name",
+        "srcEntry": "./ets/serviceExtAbility/ServiceExtAbility.ets",
+        "description": "$string:ScreenRecorderAbility_desc",
+        "metadata": [
+          {
+            "name": "com.ohos.systemui.action.TOGGLE",
+            "value": "\"pluginType\":\"1\",\"clickAction\":\"ability=com.ohos.screenrecorder|com.ohos.screenrecorder.ServiceExtAbility\""
+          }
+        ],
+        "type": "service"
+      },
+      {
+        "name": "com.ohos.screenrecorder.ToastExtensionAbility",
+        "srcEntrance": "./ets/Ability/ToastExtensionAbility.ets",
+        "type": "service",
+        "exported": false
+      },
+      {
+        "name": "com.ohos.screenrecorder.DialogAbility",
+        "srcEntry": "./ets/Ability/DialogAbility.ets",
+        "visible": true,
+        "type": "sys/commonUI"
+      },
+      {
+        "name": "BackupExtensionAbility",
+        "srcEntrance": "./ets/Backup/BackupExtension.ets",
+        "type": "backup",
+        "exported": true,
+        "metadata": [
+          {
+            "name": "ohos.extension.backup",
+            "resource": "$profile:backup_config"
+          }
+        ]
+      }
+    ],
+    "requestPermissions": [
+      {
+        "name": "ohos.permission.WRITE_IMAGEVIDEO",
+        "reason": "$string:request_write_media_permission_reason",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.MICROPHONE",
+        "reason": "$string:request_microphone_permission_reason",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.CAPTURE_SCREEN",
+        "reason": "$string:request_capture_screen_permission_reason",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.START_ABILITIES_FROM_BACKGROUND",
+        "reason": "$string:request_start_ability_background_permission_reason",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.SET_UNREMOVABLE_NOTIFICATION",
+        "reason": "$string:request_set_notification_unremovable_reason",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.MANAGE_SECURE_SETTINGS",
+        "reason": "$string:request_setting_manage_reason",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.MANAGE_SETTINGS",
+        "reason": "$string:request_setting_manage_reason",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.MANAGE_MISSIONS",
+        "reason": "$string:request_setting_missions_reason",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.GET_BUNDLE_RESOURCES",
+        "reason": "$string:request_get_bundle_resources_reason",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.SYSTEM_FLOAT_WINDOW",
+        "reason": "$string:request_set_float_window_reason",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.SUBSCRIBE_NOTIFICATION_WINDOW_STATE",
+        "reason": "$string:request_subscribe_notification_window_reason",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.CALLED_BELOW_LOCK_SCREEN",
+        "reason": "$string:request_called_below_lock_screen",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.GET_BUNDLE_INFO",
+        "usedScene": {
+          "abilities": [
+            "com.ohos.screenrecorder.ServiceExtAbility"
+          ],
+          "when": "always"
+        }
+      },
+      {
+        "name": "ohos.permission.EXEMPT_CAPTURE_SCREEN_AUTHORIZE"
+      },
+      {
+        "name": "ohos.permission.NOTIFICATION_CONTROLLER"
+      }
+    ]
+  }
+}

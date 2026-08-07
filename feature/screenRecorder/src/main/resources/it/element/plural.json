@@ -1,0 +1,23 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"one",
+                    "value":"Quando avvii una registrazione schermo, tutti i contenuti e le azioni sullo schermo verranno acquisiti in formato video. Questa funzione richiede %1$d autorizzazione.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                },
+                {
+                    "quantity":"other",
+                    "value":"Quando avvii una registrazione schermo, tutti i contenuti e le azioni sullo schermo verranno acquisiti in formato video. Questa funzione richiede %1$d autorizzazioni.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}

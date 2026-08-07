@@ -1,0 +1,480 @@
+{
+    "string":[
+        {
+            "name":"local_permission_reason_mic_1",
+            "value":"အသံဖမ်းယူရာတွင် ဤအရာကို အသုံးပြုပါသည်။",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_storage_description",
+            "value":"မျက်နှာပြင် မှတ်တမ်းများကို သိုလှောင်ရန်အတွက် ဤသည်ကို သုံးပါသည်။",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"microphone",
+            "value":"မိုက်ခရိုဖုန်း",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_media_and_files_permission",
+            "value":"မီဒီယာနှင့် ဖိုင်များ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"mic_is_unavailable",
+            "value":"မိုက်ခရိုဖုန်းကို မရရှိနိုင်ပါ။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_click_info",
+            "value":"သဘောတူသည်ကို နှိပ်ခြင်းဖြင့် ဤစည်းမျဉ်းများကို သဘောတူလိုက်ခြင်း ဖြစ်ပါသည်။",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_cancel",
+            "value":"မလုပ်ပါ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_mic_permission",
+            "value":"မိုက်ခရိုဖုန်း",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_saved_toast",
+            "value":"မှတ်တမ်းတင်မှုအား ပုံပြခန်းတွင် သိမ်းပြီးပါပြီ။",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"pre_authorization_dialog_agree",
+            "value":"သဘောတူသည်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"cannot_record_during_call_toast",
+            "value":"ဖုန်းခေါ်ဆိုနေစဉ်အတွင်း မျက်နှာပြင်ကို ရိုက်ကူး၍ မရနိုင်နိုင်ပါ။",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"stop_reason_phone_memory_full_toast",
+            "value":"စက်တွင်း သိုလှောင်မှု နည်းနေပါသည်။ ဗီဒီယိုကို သိမ်းထားပြီးပါပြီ။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_pc_text",
+            "value":"Files တွင် သိမ်းပြီးပါပြီ။",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_name",
+            "value":"ဝေမျှမည့် အကြောင်းအရာကို ရွေးချယ်ပါ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_a_screen",
+            "value":"သင် မှတ်တမ်းတင်လိုသော မျက်နှာပြင်ကို နှိပ်ပါ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_track_button",
+            "value":"ထိနှိပ်ရာများကို ပြသရန်",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"notification_subtitle",
+            "value":"မှတ်တမ်းတင်နေဆဲ",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"preview_image_accessibility_text",
+            "value":"ပုံပြခန်းတွင် သိမ်းပြီးပါပြီ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_stop_recording",
+            "value":"ရိုက်ကူးမှု ရပ်ရန်",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"stop_reason_file_changed_toast",
+            "value":"ဗီဒီယို ရိုက်ကူးမှု ရပ်သွားသည်။ မှတ်တမ်းဖိုင်ကို ပြင်ဆင်လိုက်သည် သို့မဟုတ် ဖျက်လိုက်သည်။",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_off",
+            "value":"ပိတ်ထားသည်၊ ထိနှိပ်မှုများကို ပြသမှု",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_off",
+            "value":"ပိတ်ထားသည်၊ မိုက်ခရိုဖုန်း",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"already_off",
+            "value":"%s၊ ပိတ်ထားသည်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"app_name",
+            "value":"မျက်နှာပြင် မှတ်တမ်း",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_pc_text",
+            "value":"မျက်နှာပြင် မှတ်တမ်းတင်မှုကို Files တွင် သိမ်းပြီး",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_upper",
+            "value":"မျက်နှာပြင် အပေါ်ပိုင်း",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_mission",
+            "value":"ဝင်းဒိုး",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_privacy_protection",
+            "value":"ပုဂ္ဂိုလ်ရေး အကြောင်းအရာများကို ဝှက်ရန်",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"recorder_file_failed_toast",
+            "value":"မှတ်တမ်းတင်မှု မအောင်မြင်ခဲ့ပါ။ ထပ်ကြိုးစားကြည့်ပါ။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_title",
+            "value":"ကိုယ်ရေးအချက်အလက် လုံခြုံရေး အသိပေးချက်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"screen_select_full",
+            "value":"မျက်နှာပြင် အပြည့်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_button_share",
+            "value":"စတင် ဝေမျှရန်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"recorder_file_saved_pc_toast",
+            "value":"Files တွင် သိမ်းပြီးပါပြီ။",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_interface_toast",
+            "value":"ဤမျက်နှာပြင်တွင် ပုဂ္ဂိုလ်ရေး အကြောင်းအရာများ ပါဝင်သောကြောင့် မှတ်တမ်းတင်သွားမည် မဟုတ်ပါ။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hw_video_close_mic",
+            "value":"မိုက်ခရိုဖုန်းကို မဖွင့်ထားပါ။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_stop_button",
+            "value":"အဆုံးသတ်ရန်",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_content",
+            "value":"%s သည် သင့်စက်မျက်နှာပြင်ရှိ အကြောင်းအရာများကို စတင်ရိုက်ကူးပါမည်။ စကားဝှက်များ၊ ငွေပေးချေမှု အသေးစိတ်အချက်အလက်များ၊ ဓာတ်ပုံများ၊ ဗီဒီယိုများနှင့် ချက်(တ်)များကဲ့သို့ ပုဂ္ဂိုလ်ရေး အချက်အလက်များကို ကာကွယ်ထားကြောင်း သေချာပါစေ။",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"button",
+            "value":"ခလုတ်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_text",
+            "value":"မျက်နှာပြင် မှတ်တမ်းတင်မှုကို ပုံပြခန်းတွင် သိမ်းပြီးပါပြီ။",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"select_window_screen",
+            "value":"မျက်နှာပြင်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share",
+            "value":"ဝေမျှရန်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_window_cancel",
+            "value":"မလုပ်ပါ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_protect_app",
+            "value":"သီးသန့်အက်ပ်ရှိ အကြောင်းအရာများကို ဝှက်ရန်",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"share_system_audio",
+            "value":"ကွန်ပျူတာ အသံ ဝေမျှရန်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"privacy_dialog_Deny",
+            "value":"ငြင်းပယ်ရန်",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"control_icon_name",
+            "value":"မျက်နှာပြင် မှတ်တမ်း",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_agree",
+            "value":"အိုကေ",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_protect_system",
+            "value":"စနစ် ဝင်းဒိုးများကို ဝှက်ရန်",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"microphone_being_used_toast",
+            "value":"အခြားအက်ပ်သည် မိုက်ခရိုဖုန်းကို သုံးစွဲနေပါသည်။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"screen_select_lower",
+            "value":"မျက်နှာပြင် အောက်ပိုင်း",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_mic_accessibility_text_on",
+            "value":"ဖွင့်ထားသည်၊ မိုက်ခရိုဖုန်း",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"private_protect_system_content",
+            "value":"အသိပေးချက်များ၊ ထည့်သွင်းမှု နည်းလမ်းများနှင့် အခြားအရာများတွင် သက်ရောက်ပါမည်။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_window_title",
+            "value":"%s သည် စက်မျက်နှာပြင်ကို သုံးစွဲနေပါသည်",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"hw_video_without_voice_2",
+            "value":"မိုက်ခရိုဖုန်းကို အသုံးပြုနေပါသည်။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_title",
+            "value":"%s အား သင့်စက်မျက်နှာပြင်ကို သုံးခွင့်ပြုမည်လား။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"select_window_button_back",
+            "value":"နောက်သို့ ပြန်သွားရန်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"notification_trace_accessibility_text_on",
+            "value":"ဖွင့်ထားသည်၊ ထိနှိပ်မှုများကို ပြသမှု",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"control_start_recording",
+            "value":"ရိုက်ကူးမှု စတင်ရန်",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"private_protect_app_content",
+            "value":"ငွေပေးချေမှု အက်ပ်များ၊ SMS နှင့် အခြားအရာများတွင် သက်ရောက်ပါမည်။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_content",
+            "value":"ဤအက်ပ်သည် သင့်စက်မျက်နှာပြင်ပေါ်ရှိ အရာအားလုံးအပြင် စနစ်အသံများကိုပါ မှတ်တမ်းတင်နိုင်ပါမည် သို့မဟုတ် ထုတ်လွှင့်နိုင်ပါမည်။ စကားဝှက်များ၊ ငွေပေးချေမှု အချက်အလက်၊ ဓာတ်ပုံများ၊ ဗီဒီယိုများနှင့် ဆက်သွယ်ပြောဆိုထားမှုများကဲ့သို့ ထိခိုက်လွယ်သည့် ကိုယ်ရေး အချက်အလက်များကို ကာကွယ်ထားကြောင်း သေချာပါစေ။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"already_on",
+            "value":"%s၊ ဖွင့်ထားသည်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"file_name_illegal",
+            "value":"မျက်နှာပြင် မှတ်တမ်းတင်မှု ဖိုင်အမည် ချို့ယွင်းချက်။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_dialog_Allow",
+            "value":"ခွင့်ပြုရန်",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"cannot_record_voice_during_call_toast",
+            "value":"ဖုန်းပြောနေစဉ် အသံဖမ်း၍ မရနိုင်ပါ။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"storageFull_changeto_sdcard_new",
+            "value":"စက်တွင်း သိုလှောင်မှုတွင် နေရာလွတ်မရှိသောကြောင့် မျက်နှာပြင်ကို မှတ်တမ်းတင်၍ မရပါ။ နေရာလွတ်သွားစေရန် ဖိုင်များကို ဖျက်ပါ။",
+            "attr":{
+                "priority":"LT"
+            }
+        },
+        {
+            "name":"privacy_window_record_toast",
+            "value":"စက်မျက်နှာပြင်တွင် ပုဂ္ဂိုလ်ရေး အကြောင်းအရာများ ပါဝင်ပါသည်။ အဆိုပါအကြောင်းအရာသည် ရိုက်ကူးမှုတွင် ပါဝင်သွားမည် မဟုတ်ပါ။",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+        {
+            "name":"share_audio",
+            "value":"အော်ဒီယိုကို ဝေမျှရန်",
+            "attr":{
+                "priority":"translate"
+            }
+        },
+      {
+        "name": "select_this_display_to_recorder",
+        "value": "ဤစက်မျက်နှာပြင်ကို ဗီဒီယိုရိုက်ရန် နှိပ်ပါ",
+        "attr": {
+          "priority": "translate"
+        }
+        }
+    ]
+}

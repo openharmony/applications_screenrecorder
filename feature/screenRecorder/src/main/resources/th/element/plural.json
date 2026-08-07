@@ -1,0 +1,16 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"other",
+                    "value":"เมื่อคุณเริ่มการบันทึกหน้าจอ เนื้อหาและการดำเนินการทั้งหมดบนหน้าจอจะถูกบันทึกในรูปแบบวิดีโอ ฟีเจอร์นี้ต้องการการอนุญาต %1$d",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}

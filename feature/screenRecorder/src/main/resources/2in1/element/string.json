@@ -1,0 +1,11 @@
+{
+  "string": [
+    {
+      "name": "select_this_display_to_recorder",
+      "value": "Click to record this screen",
+      "attr": {
+        "priority": "translate"
+      }
+    }
+  ]
+}

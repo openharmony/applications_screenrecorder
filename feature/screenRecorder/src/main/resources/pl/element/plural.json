@@ -1,0 +1,37 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"one",
+                    "value":"Po rozpoczęciu nagrywania ekranu cała zawartość ekranu i wykonywane na nim działania zostaną zapisane w formie nagrania wideo. Ta funkcja wymaga %1$d uprawnienia.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                },
+                {
+                    "quantity":"other",
+                    "value":"Po rozpoczęciu nagrywania ekranu cała zawartość ekranu i wykonywane na nim działania zostaną zapisane w formie nagrania wideo. Ta funkcja wymaga %1$d uprawnienia.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                },
+                {
+                    "quantity":"few",
+                    "value":"Po rozpoczęciu nagrywania ekranu cała zawartość ekranu i wykonywane na nim działania zostaną zapisane w formie nagrania wideo. Ta funkcja wymaga %1$d uprawnień.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                },
+                {
+                    "quantity":"many",
+                    "value":"Po rozpoczęciu nagrywania ekranu cała zawartość ekranu i wykonywane na nim działania zostaną zapisane w formie nagrania wideo. Ta funkcja wymaga %1$d uprawnień.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}

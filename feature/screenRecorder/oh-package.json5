@@ -1,0 +1,11 @@
+{
+  "license": "ISC",
+  "types": "",
+  "devDependencies": {},
+  "name": "@ohos/screen-recorder",
+  "description": "a npm package which contains screen recorder features",
+  "version": "1.0.0",
+  "dependencies": {
+    "@ohos/common": "file:../../common"
+  }
+}

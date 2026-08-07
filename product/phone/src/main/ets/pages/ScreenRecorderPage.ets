@@ -1,0 +1,84 @@
+/*
+ * Copyright (c) Huawei Device Co., Ltd. 2026. All rights reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/* instrument ignore file */
+import { CommonUtil, DisplayUtil, LogUtil } from '@ohos/common';
+import { SettingPage } from '@ohos/screenRecorderSetting/src/main/ets/pages/SettingPage';
+import { UIExtensionContentSession } from '@kit.AbilityKit';
+import { display } from '@kit.ArkUI';
+
+const TAG = 'ScreenRecorderPage';
+
+let storage = LocalStorage.getShared();
+@Entry
+@Component
+struct ScreenRecorderPage {
+  @State screenRecorderLottiePath: string = ''
+  private session: UIExtensionContentSession | undefined = storage.get<Object>('session') as UIExtensionContentSession;
+  private isFold: boolean = false;
+  private onFoldChangeCallBack = (status: number) => {
+    this.handleFoldStateChange(status);
+  };
+
+  build() {
+    Column() {
+      SettingPage({
+        screenRecorderLottiePath: this.screenRecorderLottiePath,
+        session: this.session
+      })
+    }
+  }
+
+  aboutToAppear(): void {
+    LogUtil.info(TAG, 'aboutToAppear enter');
+    this.isFold = this.isUseExpandStyle();
+    // 注册折叠监听
+    DisplayUtil.registerFoldStatusChange(this.onFoldChangeCallBack);
+
+    this.initLottieResource();
+  }
+
+  aboutToDisappear(): void {
+    // 销毁折叠状态监听
+    DisplayUtil.unRegisterFoldStatusChange(this.onFoldChangeCallBack)
+  }
+
+  private initLottieResource() {
+    if (CommonUtil.checkIfDeviceIsTablet()) {
+      this.screenRecorderLottiePath = 'lottie/motion_tutorial_screen_recording_pad.json';
+    } else if (this.isUseExpandStyle()) {
+      this.screenRecorderLottiePath = 'lottie/motion_tutorial_screen_recording_teton.json';
+    } else {
+      this.screenRecorderLottiePath = 'lottie/motion_tutorial_screen_recording.json';
+    }
+  }
+
+  private handleFoldStateChange(status: number): void {
+    LogUtil.info(TAG, `on fold status changed: ${status}`);
+    if (this.isUseExpandStyle() !== this.isFold) {
+      this.isFold = this.isUseExpandStyle();
+      this.initLottieResource();
+    }
+  }
+
+  private isUseExpandStyle(): boolean {
+    let deviceFoldStatus = DisplayUtil.getFoldStatus();
+    if (deviceFoldStatus === display.FoldStatus.FOLD_STATUS_UNKNOWN ||
+      deviceFoldStatus === display.FoldStatus.FOLD_STATUS_FOLDED || DisplayUtil.isSmallFoldScreen()) {
+      return false;
+    }
+    return true;
+  }
+}

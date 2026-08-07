@@ -1,0 +1,23 @@
+{
+    "plural":[
+        {
+            "name":"pre_authorization_dialog_description",
+            "value":[
+                {
+                    "quantity":"one",
+                    "value":"Durante a gravação do ecrã, será gravado tudo o que aparecer no ecrã. Esta funcionalidade necessita de %1$d permissão.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                },
+                {
+                    "quantity":"other",
+                    "value":"Durante a gravação do ecrã, será gravado tudo o que aparecer no ecrã. Esta funcionalidade necessita de %1$d permissões.",
+                    "attr":{
+                        "priority":"translate"
+                    }
+                }
+            ]
+        }
+    ]
+}
