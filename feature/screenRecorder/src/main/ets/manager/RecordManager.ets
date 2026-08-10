@@ -470,7 +470,7 @@ export class RecordManager {
     }
     this.setStopTime(Date.now());
     /* instrument ignore if */
-    if (triggerType === DEFAULT_TRIGGER_TYPE) {
+    if (triggerType === DEFAULT_TRIGGER_TYPE && !CommonUtil.checkIfDeviceIsPC()) {
       //Wait for control-center fading out.
       await new Promise<number>(resolve => setTimeout(resolve, CONTROL_PANEL_FADE_OUT_TIME));
     }
