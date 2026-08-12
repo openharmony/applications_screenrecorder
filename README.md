@@ -2,14 +2,14 @@
 
 ## 简介
 
-**录屏**（包名：`com.ohos.screenrecorder`）是 OpenHarmony 中预置的 **系统应用**，通过 `AVScreenCaptureRecorder` 采集屏幕画面与音频，提供屏幕录制、录制交互控制、录制文件处理、安全隐私界面处理能力，并适配手机、平板、PC 设备形态。
+**录屏**（包名：`com.ohos.screenrecorder`）是 OpenHarmony 中预置的 **系统应用**，通过 `@kit.MediaKit` 中的 `AVScreenCaptureRecorder` 类采集屏幕画面与音频，提供屏幕录制、录制交互控制、录制文件处理、安全隐私界面处理能力，并适配手机、平板、PC 设备形态。
 
 本应用为系统预置应用，用户可从控制中心快捷开关、快捷键触发录屏。
 
 ### 核心能力
 
 **屏幕录制**
-- 基于 `AVScreenCaptureRecorder` 实现 H.264 视频编码与 AAC 音频编码采集。
+- 通过 `@kit.MediaKit` 的 `AVScreenCaptureRecorder` 类实现 H.264 视频编码与 AAC 音频编码采集，使用 `SCREEN_RECORD_PRESET_H264_AAC_MP4` 预设。
 - 支持屏幕画面录制和触控轨迹录制，支持麦克风录制和媒体音录制两种音源。
 - 通过 `RecordManager` / `PcRecordManager` 完成录制状态机管理，通过 `RecorderConfigInterface` 策略模式为不同设备提供差异化录制参数。
 
@@ -35,7 +35,7 @@
 
 录屏采用分层与模块化设计，按产品形态、业务特性与公共能力组织代码。
 
-![架构说明](./docs/figures/ScreenRecorder.png)
+![架构说明](../screenrecorder-master/docs/figures/ScreenRecorder.png)
 
 
 ### 应用层分层设计
@@ -46,7 +46,15 @@
 |------| -------------- |--------------------------------------------------|
 | 产品层 | `product/phone`、`product/pad`、`product/pc` | 支持手机、平板、PC 形态，各产品以 `ServiceExtensionAbility` 为入口 |
 | 特性层 | `feature/screenRecorder` | 录屏核心模块（包括：屏幕录制、交互控制、文件处理、隐私界面处理）                 |
-| 公共层 | `common` | 状态管理、系统事件订阅、日志工具、Worker、DFX工具                    |
+| 公共层 | `common` | 状态管理、系统事件订阅、日志工具、屏幕检测、DFX工具                    |
+
+**产品层模块说明**：
+
+| 产品 | 关键入口与模块 | 说明 |
+|------|-------------|------|
+| phone | `Application/AbilityStage`、`ServiceExtAbility`、`ExtAbilityProxy`、`pages/` | 管理应用生命周期，接收控制中心、热键等外部 Want 事件并路由分发，承载胶囊、预览、控制中心等页面 |
+| pad | `Application/AbilityStage`、`ServiceExtAbility`、`ExtAbilityProxy`、`pages/` | 与 phone 结构一致，适配平板布局与折叠屏交互 |
+| pc | `Application/AbilityStage`、`ServiceExtAbility`、`ExtAbilityProxy`、`pages/` | 与 phone 结构一致，扩展多屏蒙层选择、BC 扩展屏录制、可拖拽胶囊窗口 |
 
 **特性层模块说明**：
 
@@ -57,23 +65,47 @@
 | 录制文件处理 | `feature/screenRecorder`(RecorderFileManager, WindowManager, PcWindowManager, PicturePreviewer)                               | 文件资产管理、预览窗动画（Phone/Pad）、预览窗拖拽（PC）、跳转相册播放         |
 | 安全隐私界面处理 | `feature/screenRecorder`(ExtAbilityProxy, RecorderUtil, FileWriteCheckWorker)                                                 | 锁屏/OOBE/省电模式拒绝触发、隐私界面处理、文件大小与空间监控 |
 
+**公共层模块说明**：
+
+| 公共模块 | 核心类 | 说明 |
+|---------|-------|------|
+| 状态管理 | `GlobalThisUtil`、`PreferenceUtils` | 跨 Ability 全局数据共享、偏好设置持久化 |
+| 系统事件订阅 | `CommonEventUtil` | 系统公共事件订阅与分发 |
+| 日志工具 | `LogUtil`、`EventReportUtil` | 统一日志输出、事件打点上报 |
+| 屏幕检测 | `DisplayUtil` | 屏幕 DPI、方向、折叠状态、显示模式检测 |
+| DFX工具 | `dfx/trace/` | 性能 Tracing 埋点，用于定位性能瓶颈 |
+
 ### 与其他应用的关系
 
 | 项目          | 说明                                                      |
 |-------------|---------------------------------------------------------|
 | 是否允许其他应用调用  | 允许。`ServiceExtensionAbility` 声明 exported=true，外部应用可通过 Want 拉起         |
-| 谁能调用        | 支持大桌面（`com.ohos.sceneboard`）拉起，系统快捷键通过多模输入子系统触发，以及 shell 命令调用    |
+| 谁能调用        | 支持大桌面（`com.ohos.sceneboard`）拉起，系统快捷键通过多模输入子系统触发，以及 shell 命令调用（如 `hdc shell aa start -a ServiceExtAbility -b com.ohos.screenrecorder`）    |
 | 什么时候能调用     | 应用安装后即可调用；OOBE 阶段、锁屏状态、省电模式下拒绝触发                           |
 | 支持的 Want 参数 | 通过 `trigger_type` 参数区分触发来源：控制中心（`default_trigger_type`）、快捷键（`hot-key`）等 |
 | 录制后相册跳转     | 通过 AbilityKit 的 StartAbility 拉起 `com.ohos.photos` 播放视频 |
 | 跨进程服务       | 通过 `ServiceExtensionAbility` 提供服务，仅系统内部进程可调用  |
+
+### 录制规格
+
+| 规格项 | 说明 |
+|--------|------|
+| 视频编码 | H.264 (AVC) |
+| 音频编码 | AAC（48000 Hz、单声道、96000 bps） |
+| 封装格式 | MP4（`SCREEN_RECORD_PRESET_H264_AAC_MP4`） |
+| 视频码率 | 10 Mbps |
+| 分辨率 | 按设备差异化：Phone 原生分辨率（长边上限 1920px）；Pad 由 CCM 云控参数 `const.screenrecorder.resolution` 下发（默认设备原生，可配 720p/1080p）；PC 原生分辨率偶数圆整，BC 录屏为 B+C 面合成尺寸 |
+| 帧率 | 未显式设置，跟随系统默认（通常取决于编码器能力与系统策略） |
+| 文件命名 | `SVID_YYYYMMDD_HHmmss_N.mp4` |
+| 单文件上限 | 3 GB（超出自动新建文件继续录制） |
+| 最低存储 | 128 MB 可用空间 |
 
 ## 编译构建
 
 本工程为多模块 HAR + HAP 应用工程，使用 Hvigor 构建，产物为各设备形态的系统应用包。
 
 ### 环境要求
-- OpenHarmony SDK（本工程 compileSdkVersion 为 "26.0.0"，compatibleSdkVersion / targetSdkVersion 为 20）
+- OpenHarmony SDK（本工程 compileSdkVersion 为 "26.0.0"，compatibleSdkVersion / targetSdkVersion 为 23）
 - DevEco Studio 或命令行 Hvigor 工具链
 - 系统签名证书（见 `signature/`）
 
@@ -201,40 +233,19 @@ hvigorw assembleHap
 
 > **说明**：当前工程采用 `product + feature + common` 多模块结构，产品入口主要在 `product/phone`、`product/pad`、`product/pc`。新能力一般按现有分层扩展；若新增产品形态 HAP，可在 `product/` 下增加对应目录并在 `build-profile.json5` 中注册。
 
-**步骤1：扩展业务能力（最常见）**
+**场景示例：录制中途切换麦克风音源**
 
-1. 在 `feature/screenRecorder` 中补充 Manager、组件或 Worker 逻辑。
-2. 如涉及录制参数变化，在 `manager/config/` 中新增或扩展配置类，并实现 `RecorderConfigInterface` 接口。
-3. 如涉及 UI 变化，在 `components/` 中补充页面组件，并在对应 `WindowManager` 中添加创建/销毁方法。
-4. 如涉及后台监控，在 `worker/` 中补充 Worker 线程逻辑。
-5. 在 `product/phone/src/ohosTest` 中补充对应 UT / DT 用例，并在测试文件中注册。
+以下以"录制过程中开启/关闭麦克风"为例，展示新增录制音源切换能力的完整开发路径：
 
-**步骤2：配置 / 确认 Ability 入口**
+1. 在 `feature/screenRecorder/src/main/ets/manager/` 中新增 `MicManager.ets`，封装麦克风控制逻辑：通过 `AVScreenCaptureRecorder.setMicEnabled()` 切换麦克风开关，通过 `PreferenceUtils` 持久化麦克风状态，调用 `EventReportUtil` 上报切换事件。麦克风被占用时（`SCREENCAPTURE_STATE_MIC_UNAVAILABLE`）禁用切换并 Toast 提示。
 
-本工程入口已在各产品 `src/main/module.json5` 中声明，扩展能力时通常只需确认权限、Ability 配置是否满足新场景：
+2. 在 `feature/screenRecorder/src/main/ets/components/Capsule/index.ets` 的胶囊窗口中新增麦克风按钮区域（`buildMicArea`），显示麦克风开关图标与文字，点击触发 `MicManager.setMicEnabled()`，并根据当前麦克风状态切换图标高亮/置灰。
 
-```json
-{
-  "module": {
-    "name": "phone",
-    "type": "entry",
-    "srcEntry": "./ets/Application/ScreenRecorderAbilityStage.ets",
-    "mainElement": "ServiceExtAbility",
-    "deviceTypes": [
-      "default",
-      "tablet"
-    ],
-    "abilities": [
-      {
-        "name": "ServiceExtAbility",
-        "srcEntry": "./ets/serviceExtAbility/ServiceExtAbility.ets",
-        "type": "service",
-        "exported": true
-      }
-    ]
-  }
-}
-```
+3. 在 `RecordManager.setAVScreenCaptureCallback()` 中新增 `SCREENCAPTURE_STATE_MIC_UNAVAILABLE` 状态处理：标记麦克风不可用，刷新胶囊 UI。
+
+4. PC 端额外通过 `@kit.AudioKit` 监听系统静音状态（`micStateChange`），用户按键盘物理静音键时同步关闭录屏麦克风。
+
+5. 在 `product/phone/src/ohosTest` 中新增 `MicManager.test.ets` 测试用例。
 
 事件入口（`ServiceExtAbility`）典型处理：
 
@@ -257,10 +268,6 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
   }
 }
 ```
-
-**步骤3：定制 UI**
-
-在完成业务能力与 Ability 配置后，按上一节「对已有模块的功能修改与裁剪」中的 UI 组件修改方式扩展胶囊、预览窗、蒙层、控制中心或设置页面即可。
 
 若需新增独立页面：
 1. 在对应模块 `pages/` 下新增页面文件；
@@ -299,6 +306,7 @@ screenrecorder
 │   ├── pad/                                 # 平板形态 HAP
 │   └── pc/                                  # PC 形态 HAP
 ├── signature                                # 签名证书与 profile
+├── bundle.json                              # 部件描述文件
 ├── build-profile.json5                      # 工程级配置
 ├── oh-package.json5
 ├── build.sh                                 # CI 构建脚本
@@ -324,6 +332,18 @@ screenrecorder
   | ohos.permission.MANAGE_SECURE_SETTINGS | 系统授权 | 系统设置项读写（触控轨迹等） |
   | ohos.permission.WRITE_IMAGEVIDEO | 系统授权 | 将录制文件写入媒体库 |
   | ohos.permission.START_ABILITIES_FROM_BACKGROUND | 系统授权 | 后台拉起 Ability |
+
+- **屏幕约束**：
+  - 多显示屏场景下，开启录屏后所有屏幕均显示蒙灰，用户可自行选择录制哪个屏幕。
+  - 外接显示屏电源断开，不影响录制，继续进行。
+  - 拔掉显示屏与主机的连线（触发 display remove），正在录制该屏时停止录屏。
+  - 折叠屏折叠或展开时，停止录屏。
+
+- **异常场景处理**：
+  - 存储空间不足（< 128 MB）：拒绝启动录制，提示用户清理空间；录制中空间不足则自动停止录制。
+  - 单文件超 3 GB：自动新建文件继续录制。
+  - 系统内存不足或过热：由系统底层低内存/温控机制查杀录屏进程。
+  - 录制服务异常（`AVERR_SERVICE_DIED`）：释放资源、停止录制、终止进程。
 
 - **形态适配**：不同设备形态会改变录制分辨率与窗口布局，修改 UI 时需覆盖多形态验证
 
