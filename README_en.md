@@ -2,14 +2,14 @@
 
 ## Introduction
 
-**Screen Recorder** (package name: `com.ohos.screenrecorder`) is a pre-installed **system application** in OpenHarmony that captures screen content and audio via `AVScreenCaptureRecorder`, providing screen recording, recording interaction and control, recording file processing, and security & privacy screen recording capabilities across phones, tablets, and PCs.
+**Screen Recorder** (package name: `com.ohos.screenrecorder`) is a pre-installed **system application** in OpenHarmony that captures screen content and audio via the `AVScreenCaptureRecorder` class from `@kit.MediaKit`, providing screen recording, recording interaction and control, recording file processing, and security & privacy screen handling capabilities across phones, tablets, and PCs.
 
 This application is a pre-installed system app. Users can trigger recording via Control Center quick toggles and keyboard shortcuts.
 
 ### Core Capabilities
 
 **Screen Recording**
-- H.264 video encoding and AAC audio encoding via `AVScreenCaptureRecorder`.
+- H.264 video encoding and AAC audio encoding via the `AVScreenCaptureRecorder` class from `@kit.MediaKit`, using the `SCREEN_RECORD_PRESET_H264_AAC_MP4` preset.
 - Supports screen capture and touch-trajectory recording, with two audio sources: microphone and system media audio.
 - Uses `RecordManager` / `PcRecordManager` for recording state machine management, and `RecorderConfigInterface` strategy pattern for device-specific recording parameters.
 
@@ -34,7 +34,7 @@ This application is a pre-installed system app. Users can trigger recording via 
 
 Screen Recorder adopts a layered and modular design, organizing code by product form, business features, and common capabilities.
 
-![Architecture](./docs/figures/ScreenRecorder_en.png)
+![Architecture](../screenrecorder-master/docs/figures/ScreenRecorder_en.png)
 
 ### Application Layer Design
 
@@ -44,7 +44,15 @@ The application is divided into three layers:
 |------| -------------- |----------------------------------------------------------------------------------------------------------|
 | Product | `product/phone`, `product/pad`, `product/pc` | Supports phone, tablet, and PC forms; each product uses `ServiceExtensionAbility` as the entry point     |
 | Feature | `feature/screenRecorder` | Core recording module(including:Screen Recording, Interaction & Control, File Processing, Privacy Screen Handling) |
-| Common | `common` | State management, system event subscription, logging, Worker, DFX tools                                  |
+| Common | `common` | State management, system event subscription, logging, screen detection, DFX tools                                 |
+
+**Product Layer Module Details**:
+
+| Product | Key Entry & Modules | Description |
+|---------|-------------------|-------------|
+| phone | `Application/AbilityStage`, `ServiceExtAbility`, `ExtAbilityProxy`, `pages/` | Manages app lifecycle, receives Control Center/hotkey Want events and routes them, hosts capsule/preview/control center pages |
+| pad | `Application/AbilityStage`, `ServiceExtAbility`, `ExtAbilityProxy`, `pages/` | Same structure as phone, adapted for tablet layout and foldable screen interaction |
+| pc | `Application/AbilityStage`, `ServiceExtAbility`, `ExtAbilityProxy`, `pages/` | Same structure as phone, with extended multi-screen mask selection, BC screen recording, and draggable capsule window |
 
 **Feature Layer Module Details**:
 
@@ -55,23 +63,47 @@ The application is divided into three layers:
 | Recording File Processing | `feature/screenRecorder`(RecorderFileManager, WindowManager, PcWindowManager, PicturePreviewer)                                 | File asset management, preview animation (Phone/Pad), preview drag (PC), jump to album for playback         |
 | Security & Privacy Screen Handling | `feature/screenRecorder`(ExtAbilityProxy, RecorderUtil, FileWriteCheckWorker)                                                   | Lock screen/OOBE/power saving mode rejection, privacy interface handling, file size and space monitoring |
 
+**Common Layer Module Details**:
+
+| Common Module | Core Classes | Description |
+|-------------|-------------|-------------|
+| State Management | `GlobalThisUtil`, `PreferenceUtils` | Cross-Ability global data sharing, preference persistence |
+| System Event Subscription | `CommonEventUtil` | System common event subscription and distribution |
+| Logging | `LogUtil`, `EventReportUtil` | Unified logging, event reporting |
+| Screen Detection | `DisplayUtil` | Screen DPI, orientation, fold status, display mode detection |
+| DFX Tools | `dfx/trace/` | Performance tracing for identifying bottlenecks |
+
 ### Relationship with Other Applications
 
 | Item          | Description                                                      |
 |-------------|---------------------------------------------------------|
 | Can other apps invoke it?  | Yes. `ServiceExtensionAbility` declares exported=true; external apps can launch via Want         |
-| Who can invoke it?        | Supports launching by SceneBoard (`com.ohos.sceneboard`), system hotkeys via multimodal input subsystem, and shell commands    |
+| Who can invoke it?        | Supports launching by SceneBoard (`com.ohos.sceneboard`), system hotkeys via multimodal input subsystem, and shell commands (e.g. `hdc shell aa start -a ServiceExtAbility -b com.ohos.screenrecorder`)    |
 | When can it be invoked?     | Can be invoked after installation; triggers are rejected during OOBE, lock screen, and power saving mode                           |
 | Supported Want parameters | Trigger source is distinguished by the `trigger_type` parameter: Control Center (`default_trigger_type`), hotkey (`hot-key`), etc. |
 | Post-recording album jump     | Launches `com.ohos.photos` via AbilityKit's StartAbility for video playback |
 | Cross-process service       | Provides service via `ServiceExtensionAbility`; callable only by internal system processes  |
+
+### Recording Specifications
+
+| Spec | Description |
+|------|-------------|
+| Video Codec | H.264 (AVC) |
+| Audio Codec | AAC (48000 Hz, mono, 96000 bps) |
+| Container | MP4 (`SCREEN_RECORD_PRESET_H264_AAC_MP4`) |
+| Video Bitrate | 10 Mbps |
+| Resolution | Device-specific: Phone uses native resolution (max side capped at 1920px); Pad is controlled by CCM parameter `const.screenrecorder.resolution` (defaults to device native, configurable to 720p/1080p); PC uses native resolution rounded to even numbers, BC recording uses combined B+C dimensions |
+| Frame Rate | Not explicitly set; follows system default (depends on encoder capability and system policy) |
+| File Naming | `SVID_YYYYMMDD_HHmmss_N.mp4` |
+| Max File Size | 3 GB (auto-creates a new file to continue recording) |
+| Min Storage | 128 MB free space |
 
 ## Build
 
 This project is a multi-module HAR + HAP application project built with Hvigor, producing per-device-form system application packages.
 
 ### Environment Requirements
-- OpenHarmony SDK (compileSdkVersion: "26.0.0", compatibleSdkVersion / targetSdkVersion: 20)
+- OpenHarmony SDK (compileSdkVersion: "26.0.0", compatibleSdkVersion / targetSdkVersion: 23)
 - DevEco Studio or command-line Hvigor toolchain
 - System signing certificates (see `signature/`)
 
@@ -198,40 +230,19 @@ Applicable scenarios: adding new recording capabilities, extending capsule forms
 
 > **Note**: This project uses a `product + feature + common` multi-module structure, with product entry points mainly in `product/phone`, `product/pad`, and `product/pc`. New capabilities are generally extended within the existing layering; if a new product form HAP is needed, add the corresponding directory under `product/` and register it in `build-profile.json5`.
 
-**Step 1: Extend business capabilities (most common)**
+**Scenario Example: Switching Microphone Audio Source Mid-Recording**
 
-1. Add Manager, component, or Worker logic in `feature/screenRecorder`.
-2. If recording parameters change, add or extend config classes in `manager/config/` and implement the `RecorderConfigInterface` interface.
-3. If UI changes, add page components in `components/` and add create/destroy methods in the corresponding `WindowManager`.
-4. If background monitoring is involved, add Worker thread logic in `worker/`.
-5. Add corresponding UT/DT test cases in `product/phone/src/ohosTest` and register them in the test files.
+The following uses "enabling/disabling the microphone during recording" as an example to demonstrate the complete development path for adding an audio source switching capability:
 
-**Step 2: Configure / verify Ability entry points**
+1. Add `MicManager.ets` in `feature/screenRecorder/src/main/ets/manager/` to encapsulate microphone control logic: toggling via `AVScreenCaptureRecorder.setMicEnabled()`, persisting microphone state via `PreferenceUtils`, and reporting switch events via `EventReportUtil`. When the microphone is occupied (`SCREENCAPTURE_STATE_MIC_UNAVAILABLE`), disable switching and show a Toast.
 
-This project's entry points are already declared in each product's `src/main/module.json5`. When extending capabilities, usually only need to confirm whether permissions and Ability configuration meet the new scenario:
+2. Add a microphone button area (`buildMicArea`) to the capsule window in `feature/screenRecorder/src/main/ets/components/Capsule/index.ets`, displaying a microphone icon and label. Tapping triggers `MicManager.setMicEnabled()`, with the icon switching between highlighted and grayed-out states based on current microphone status.
 
-```json
-{
-  "module": {
-    "name": "phone",
-    "type": "entry",
-    "srcEntry": "./ets/Application/ScreenRecorderAbilityStage.ets",
-    "mainElement": "ServiceExtAbility",
-    "deviceTypes": [
-      "default",
-      "tablet"
-    ],
-    "abilities": [
-      {
-        "name": "ServiceExtAbility",
-        "srcEntry": "./ets/serviceExtAbility/ServiceExtAbility.ets",
-        "type": "service",
-        "exported": true
-      }
-    ]
-  }
-}
-```
+3. Add `SCREENCAPTURE_STATE_MIC_UNAVAILABLE` state handling in `RecordManager.setAVScreenCaptureCallback()`: mark the microphone as unavailable and refresh the capsule UI.
+
+4. On PC, additionally monitor the system mute state via `@kit.AudioKit` (`micStateChange`). When the user presses the physical keyboard mute key, synchronize by disabling the recording microphone.
+
+5. Add `MicManager.test.ets` test cases in `product/phone/src/ohosTest`.
 
 Event entry (`ServiceExtAbility`) typical handling:
 
@@ -254,10 +265,6 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
   }
 }
 ```
-
-**Step 3: Customize UI**
-
-After completing business capabilities and Ability configuration, extend the capsule, preview window, mask, control center, or settings page following the UI component modification approach in the previous section "Modifying and Trimming Existing Modules".
 
 To add a new standalone page:
 1. Add a new page file under the corresponding module's `pages/` directory;
@@ -296,6 +303,7 @@ screenrecorder
 │   ├── pad/                                 # Tablet form HAP
 │   └── pc/                                  # PC form HAP
 ├── signature                                # Signing certificates & profile
+├── bundle.json                              # Component descriptor
 ├── build-profile.json5                      # Project-level config
 ├── oh-package.json5
 ├── build.sh                                 # CI build script
@@ -321,6 +329,18 @@ screenrecorder
   | ohos.permission.MANAGE_SECURE_SETTINGS | System grant | Read/write system settings (touch-trajectory, etc.) |
   | ohos.permission.WRITE_IMAGEVIDEO | System grant | Write recording files to media library |
   | ohos.permission.START_ABILITIES_FROM_BACKGROUND | System grant | Launch Ability from background |
+
+- **Screen Constraints**:
+  - In multi-display scenarios, all screens display a gray mask overlay when recording is triggered, allowing the user to select which screen to record.
+  - Turning off the external display's power does not affect recording; recording continues.
+  - Unplugging the display cable from the host (triggering display remove) stops recording when the display being recorded is removed.
+  - Foldable screen folding or unfolding stops recording.
+
+- **Abnormal Scenario Handling**:
+  - Insufficient storage (< 128 MB): reject recording start and prompt the user to free space; stop recording automatically if space runs low during recording.
+  - Single file exceeds 3 GB: automatically create a new file to continue recording.
+  - Low system memory or overheating: the recording process is killed by the underlying low-memory killer or thermal control mechanism.
+  - Recording service error (`AVERR_SERVICE_DIED`): release resources, stop recording, and terminate the process.
 
 - **Form factor adaptation**: Different device forms may change recording resolution and window layout. UI modifications must be verified across multiple form factors.
 
