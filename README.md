@@ -105,7 +105,7 @@
 本工程为多模块 HAR + HAP 应用工程，使用 Hvigor 构建，产物为各设备形态的系统应用包。
 
 ### 环境要求
-- OpenHarmony SDK（本工程 compileSdkVersion 为 26.0.0，compatibleSdkVersion / targetSdkVersion 为 23）
+- OpenHarmony SDK（本工程 compileSdkVersion 为 "26.0.0"，compatibleSdkVersion / targetSdkVersion 为 23）
 - DevEco Studio 或命令行 Hvigor 工具链
 - 系统签名证书（见 `signature/`）
 
