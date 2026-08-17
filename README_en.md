@@ -103,7 +103,7 @@ The application is divided into three layers:
 This project is a multi-module HAR + HAP application project built with Hvigor, producing per-device-form system application packages.
 
 ### Environment Requirements
-- OpenHarmony SDK (compileSdkVersion: 26.0.0, compatibleSdkVersion / targetSdkVersion: 23)
+- OpenHarmony SDK (compileSdkVersion: "26.0.0", compatibleSdkVersion / targetSdkVersion: 23)
 - DevEco Studio or command-line Hvigor toolchain
 - System signing certificates (see `signature/`)
 
