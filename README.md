@@ -35,7 +35,7 @@
 
 录屏采用分层与模块化设计，按产品形态、业务特性与公共能力组织代码。
 
-![架构说明](../screenrecorder-master/docs/figures/ScreenRecorder.png)
+![架构说明](./docs/figures/ScreenRecorder.png)
 
 
 ### 应用层分层设计

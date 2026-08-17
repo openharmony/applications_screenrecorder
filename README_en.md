@@ -34,7 +34,7 @@ This application is a pre-installed system app. Users can trigger recording via 
 
 Screen Recorder adopts a layered and modular design, organizing code by product form, business features, and common capabilities.
 
-![Architecture](../screenrecorder-master/docs/figures/ScreenRecorder_en.png)
+![Architecture](./docs/figures/ScreenRecorder_en.png)
 
 ### Application Layer Design
 
