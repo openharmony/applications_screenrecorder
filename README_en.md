@@ -34,7 +34,7 @@ This application is a pre-installed system app. Users can trigger recording via 
 
 Screen Recorder adopts a layered and modular design, organizing code by product form, business features, and common capabilities.
 
-![Architecture](../screenrecorder-master/docs/figures/ScreenRecorder_en.png)
+![Architecture](./docs/figures/ScreenRecorder_en.png)
 
 ### Application Layer Design
 
@@ -103,7 +103,7 @@ The application is divided into three layers:
 This project is a multi-module HAR + HAP application project built with Hvigor, producing per-device-form system application packages.
 
 ### Environment Requirements
-- OpenHarmony SDK (compileSdkVersion: "26.0.0", compatibleSdkVersion / targetSdkVersion: 23)
+- OpenHarmony SDK (compileSdkVersion: 26.0.0, compatibleSdkVersion / targetSdkVersion: 23)
 - DevEco Studio or command-line Hvigor toolchain
 - System signing certificates (see `signature/`)
 
