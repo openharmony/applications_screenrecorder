@@ -92,7 +92,7 @@ The application is divided into three layers:
 | Audio Codec | AAC (48000 Hz, mono, 96000 bps) |
 | Container | MP4 (`SCREEN_RECORD_PRESET_H264_AAC_MP4`) |
 | Video Bitrate | 10 Mbps |
-| Resolution | Device-specific: Phone uses native resolution (max side capped at 1920px); Pad is controlled by CCM parameter `const.screenrecorder.resolution` (defaults to device native, configurable to 720p/1080p); PC uses native resolution rounded to even numbers, BC recording uses combined B+C dimensions |
+| Resolution | Device-specific: Phone uses native resolution (max side capped at 1920 pixels); Pad is controlled by CCM parameter `const.screenrecorder.resolution` (defaults to device native, configurable to a max side of 1280 / 1920 pixels, i.e. 720p/1080p); PC uses native resolution with width and height rounded up to even numbers, BC recording uses combined B+C dimensions |
 | Frame Rate | Not explicitly set; follows system default (depends on encoder capability and system policy) |
 | File Naming | `SVID_YYYYMMDD_HHmmss_N.mp4` |
 | Max File Size | 3 GB (auto-creates a new file to continue recording) |
@@ -137,7 +137,7 @@ Applicable scenarios: customizing existing capabilities, such as adjusting recor
      For example, to change the video bitrate, modify the `DEFAULT_VIDEO_BIT_RATE` constant in each config class:
      ```typescript
      // PhoneRecorderConfigImpl.ets / PadRecorderConfigImpl.ets / PcRecorderConfigImpl.ets
-     // [Modification] Change video bitrate from 12000000 to 10000000 to stay within encoder limits
+     // [Modification] Set video bitrate to 10000000 to stay within encoder limits
      const DEFAULT_VIDEO_BIT_RATE = 10000000;
 
      // Referenced in getVideoConfig()
@@ -151,7 +151,7 @@ Applicable scenarios: customizing existing capabilities, such as adjusting recor
    - Core flow entry is in `feature/screenRecorder/src/main/ets/manager/RecordManager.ets`
    - `RecordManager.trigger()` → `startTrigger()` → `recordingNewVideoFile()` is the startup chain
    - `RecordManager.stop()` is the stop chain
-   - PC-specific overrides are in `feature/screenRecorder/src/main/ets/manager/PcRecordManager.ets`
+   - PC-specific logic is in `feature/screenRecorder/src/main/ets/manager/PcRecordManager.ets` (which extends `RecordManager` and overrides its behavior)
 
      For example, to add a custom pre-check before recording starts, modify `RecordManager.startTrigger()`:
      ```typescript
