@@ -2,7 +2,7 @@
 
 ## 简介
 
-**录屏**（包名：`com.ohos.screenrecorder`）是 OpenHarmony 中预置的 **系统应用**，通过 `@kit.MediaKit` 中的 `AVScreenCaptureRecorder` 类采集屏幕画面与音频，提供屏幕录制、录制交互控制、录制文件处理、安全隐私界面处理能力，并适配手机、平板、PC 设备形态。
+**录屏**（包名：`com.ohos.screenrecorder`）是 OpenHarmony 中预置的 **系统应用**，通过 `@kit.MediaKit` 中的 `AVScreenCaptureRecorder` 类采集屏幕画面与音频，提供屏幕录制、录制交互控制、录制文件处理、安全隐私界面处理能力，并适配 Phone、Pad、PC 设备形态。
 
 本应用为系统预置应用，用户可从控制中心快捷开关、快捷键触发录屏。
 
@@ -44,7 +44,7 @@
 
 | 层次   | 主要目录 / 组件 | 说明                                               |
 |------| -------------- |--------------------------------------------------|
-| 产品层 | `product/phone`、`product/pad`、`product/pc` | 支持手机、平板、PC 形态，各产品以 `ServiceExtensionAbility` 为入口 |
+| 产品层 | `product/phone`、`product/pad`、`product/pc` | 支持 Phone、Pad、PC 形态，各产品以 `ServiceExtensionAbility` 为入口 |
 | 特性层 | `feature/screenRecorder` | 录屏核心模块（包括：屏幕录制、交互控制、文件处理、隐私界面处理）                 |
 | 公共层 | `common` | 状态管理、系统事件订阅、日志工具、屏幕检测、DFX工具                    |
 
@@ -53,7 +53,7 @@
 | 产品 | 关键入口与模块 | 说明 |
 |------|-------------|------|
 | phone | `Application/AbilityStage`、`ServiceExtAbility`、`ExtAbilityProxy`、`pages/` | 管理应用生命周期，接收控制中心、热键等外部 Want 事件并路由分发，承载胶囊、预览、控制中心等页面 |
-| pad | `Application/AbilityStage`、`ServiceExtAbility`、`ExtAbilityProxy`、`pages/` | 与 phone 结构一致，适配平板布局与折叠屏交互 |
+| pad | `Application/AbilityStage`、`ServiceExtAbility`、`ExtAbilityProxy`、`pages/` | 与 phone 结构一致，适配 Pad 布局与折叠屏交互 |
 | pc | `Application/AbilityStage`、`ServiceExtAbility`、`ExtAbilityProxy`、`pages/` | 与 phone 结构一致，扩展多屏蒙层选择、BC 扩展屏录制、可拖拽胶囊窗口 |
 
 **特性层模块说明**：
@@ -94,7 +94,7 @@
 | 音频编码 | AAC（48000 Hz、单声道、96000 bps） |
 | 封装格式 | MP4（`SCREEN_RECORD_PRESET_H264_AAC_MP4`） |
 | 视频码率 | 10 Mbps |
-| 分辨率 | 按设备差异化：Phone 原生分辨率（长边上限 1920px）；Pad 由 CCM 云控参数 `const.screenrecorder.resolution` 下发（默认设备原生，可配 720p/1080p）；PC 原生分辨率偶数圆整，BC 录屏为 B+C 面合成尺寸 |
+| 分辨率 | 按设备差异化：Phone 原生分辨率（长边上限 1920 像素）；Pad 由 CCM 云控参数 `const.screenrecorder.resolution` 下发（默认设备原生，可配长边 1280 / 1920 像素，对应 720p/1080p）；PC 原生分辨率宽高向上取整为偶数，BC 录屏为 B+C 面合成尺寸 |
 | 帧率 | 未显式设置，跟随系统默认（通常取决于编码器能力与系统策略） |
 | 文件命名 | `SVID_YYYYMMDD_HHmmss_N.mp4` |
 | 单文件上限 | 3 GB（超出自动新建文件继续录制） |
@@ -132,15 +132,15 @@ hvigorw assembleHap
 1. 明确改动点：按业务边界定位到 `product/phone`（入口与代理）、`feature/screenRecorder`（录制核心）或 `common`（公共能力）。
 
 2. 修改录制参数：
-   - 手机配置位于 `feature/screenRecorder/src/main/ets/manager/config/PhoneRecorderConfigImpl.ets`
-   - 平板配置位于 `feature/screenRecorder/src/main/ets/manager/config/PadRecorderConfigImpl.ets`
+   - Phone 配置位于 `feature/screenRecorder/src/main/ets/manager/config/PhoneRecorderConfigImpl.ets`
+   - Pad 配置位于 `feature/screenRecorder/src/main/ets/manager/config/PadRecorderConfigImpl.ets`
    - PC 配置位于 `feature/screenRecorder/src/main/ets/manager/config/PcRecorderConfigImpl.ets`
    - 均实现 `RecorderConfigInterface` 接口，通过 `RecordManager.getInstance()` 按设备类型自动选择。
 
      例如，需修改视频码率，在各配置类中调整 `DEFAULT_VIDEO_BIT_RATE` 常量：
      ```typescript
      // PhoneRecorderConfigImpl.ets / PadRecorderConfigImpl.ets / PcRecorderConfigImpl.ets
-     // 【修改点】将视频码率从 12000000 改为 10000000，确保在编码器支持的范围内
+     // 【修改点】将视频码率设置为 10000000，确保在编码器支持的范围内
      const DEFAULT_VIDEO_BIT_RATE = 10000000;
 
      // getVideoConfig() 中引用该常量
@@ -154,7 +154,7 @@ hvigorw assembleHap
    - 核心流程入口位于 `feature/screenRecorder/src/main/ets/manager/RecordManager.ets`
    - `RecordManager.trigger()` → `startTrigger()` → `recordingNewVideoFile()` 为启动链路
    - `RecordManager.stop()` 为停止链路
-   - PC 特有覆写位于 `feature/screenRecorder/src/main/ets/manager/PcRecordManager.ets`
+   - PC 形态的差异逻辑位于 `feature/screenRecorder/src/main/ets/manager/PcRecordManager.ets`（继承 `RecordManager` 并覆写）
 
      例如，需在录制启动前新增自定义前置检查，可在 `RecordManager.startTrigger()` 中添加相关逻辑：
      ```typescript
@@ -296,14 +296,14 @@ screenrecorder
 │           ├── util/                        # 工具类（进程管理、省电模式）
 │           └── worker/                      # Worker 后台线程（文件监控、时间戳）
 ├── product                                  # 产品层
-│   ├── phone/                               # 手机形态 HAP
+│   ├── phone/                               # Phone 形态 HAP
 │   │   └── src/main/ets/
 │   │       ├── Application/                 # AbilityStage
 │   │       ├── Ability/                     # ServiceExtensionAbility / UIAbility
 │   │       ├── pages/                       # 页面（胶囊页、预览页、控制页等）
 │   │       ├── proxy/                       # ExtAbilityProxy 业务代理
 │   │       └── serviceExtAbility/           # ServiceExtensionAbility 入口
-│   ├── pad/                                 # 平板形态 HAP
+│   ├── pad/                                 # Pad 形态 HAP
 │   └── pc/                                  # PC 形态 HAP
 ├── signature                                # 签名证书与 profile
 ├── bundle.json                              # 部件描述文件
