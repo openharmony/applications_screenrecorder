@@ -70,7 +70,7 @@ The application is divided into three layers:
 | State Management | `GlobalThisUtil`, `PreferenceUtils` | Cross-Ability global data sharing, preference persistence |
 | System Event Subscription | `CommonEventUtil` | System common event subscription and distribution |
 | Logging | `LogUtil`, `EventReportUtil` | Unified logging, event reporting |
-| Screen Detection | `DisplayUtil` | Screen DPI, orientation, fold status, display mode detection |
+| Screen Detection | `DisplayUtil` | Detects screen DPI, orientation (`getDefaultDisplaySync`) and fold status (`isFoldable` / `getFoldStatus` / `foldStatusChange`) via the `display` API of `@kit.ArkUI` |
 | DFX Tools | `dfx/trace/` | Performance tracing for identifying bottlenecks |
 
 ### Relationship with Other Applications
