@@ -72,7 +72,7 @@
 | 状态管理 | `GlobalThisUtil`、`PreferenceUtils` | 跨 Ability 全局数据共享、偏好设置持久化 |
 | 系统事件订阅 | `CommonEventUtil` | 系统公共事件订阅与分发 |
 | 日志工具 | `LogUtil`、`EventReportUtil` | 统一日志输出、事件打点上报 |
-| 屏幕检测 | `DisplayUtil` | 屏幕 DPI、方向、折叠状态、显示模式检测 |
+| 屏幕检测 | `DisplayUtil` | 基于 `@kit.ArkUI` 的 `display` 接口，检测屏幕 DPI、方向（`getDefaultDisplaySync`）及折叠屏状态（`isFoldable` / `getFoldStatus` / `foldStatusChange`） |
 | DFX工具 | `dfx/trace/` | 性能 Tracing 埋点，用于定位性能瓶颈 |
 
 ### 与其他应用的关系
