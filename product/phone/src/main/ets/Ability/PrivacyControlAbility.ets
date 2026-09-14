@@ -37,6 +37,17 @@ export default class PrivacyControlAbility extends ServiceExtensionAbility {
   private globalThisInstance: GlobalThisUtil = GlobalThisUtil.getInstance();
   private captureSessionId: number = 0;
 
+  private parseWantWholeTokenInt(value: Object | undefined | null, defaultValue: number): number {
+    if (typeof value === 'number' && Number.isFinite(value)) {
+      return value;
+    }
+    const valueText: string = String(value ?? '');
+    if (/^\d+$/.test(valueText)) {
+      return Number.parseInt(valueText, 10);
+    }
+    return defaultValue;
+  }
+
   onCreate() {
     LogUtil.info(TAG, 'PrivacyControlAbility onCreate');
   }
@@ -49,7 +60,7 @@ export default class PrivacyControlAbility extends ServiceExtensionAbility {
     }
     try {
       if (want.parameters?.sessionId !== undefined) {
-        this.captureSessionId = Number(want.parameters?.sessionId);
+        this.captureSessionId = this.parseWantWholeTokenInt(want.parameters?.sessionId, this.captureSessionId);
       }
       if (want.parameters?.terminateSelf === true) {
         LogUtil.info(TAG, `terminateSelf(${want.parameters?.terminateSelf}) id: ${this.captureSessionId}`);

@@ -113,6 +113,17 @@ export struct DialogPage {
   private isTabletDevice: boolean = false;
   private submitJsonData: CommonSelectPicker.JsonData | null = null;
 
+  private parseWantWholeTokenInt(value: Object | undefined | null, defaultValue: number): number {
+    if (typeof value === 'number' && Number.isFinite(value)) {
+      return value;
+    }
+    const valueText: string = String(value ?? '');
+    if (/^\d+$/.test(valueText)) {
+      return Number.parseInt(valueText, 10);
+    }
+    return defaultValue;
+  }
+
   @Builder
   imageContent(item: CommonSelectPicker.WindowImageData, idx: number) {
     Column() {
@@ -633,13 +644,7 @@ export struct DialogPage {
       if (appLabel !== undefined) {
         this.appLabel = appLabel.toString();
       }
-      let sessionIdStr = wantParams?.sessionId as string;
-      if (sessionIdStr !== undefined) {
-        let sessionId = Number(sessionIdStr);
-        if (!Number.isNaN(sessionId)) {
-          this.sessionId = sessionId;
-        }
-      }
+      this.sessionId = this.parseWantWholeTokenInt(wantParams?.sessionId, this.sessionId);
       LogUtil.info(TAG, `wantParams showShareSystemAudioBox: ${this.showShareSystemAudioBox} ` +
         `isInnerAudioBoxSelected: ${this.isInnerAudioBoxSelected} checkBoxSelected: ${this.checkBoxSelected} ` +
         `wantShowSensitiveCheckBox: ${this.showSensitiveCheckBox} appLabel: ${this.appLabel} app: ${this.sessionId}`);
@@ -660,7 +665,7 @@ export struct DialogPage {
         LogUtil.error(TAG, `callerUidStr is undefined`);
         return;
       }
-      let callerUid = Number(callerUidStr);
+      let callerUid = this.parseWantWholeTokenInt(callerUidStr, NaN);
       if (Number.isNaN(callerUid)) {
         LogUtil.error(TAG, `callerUid is invalid`);
         return;

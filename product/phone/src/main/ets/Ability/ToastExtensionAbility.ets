@@ -23,12 +23,23 @@ const TAG = 'ToastExtensionAbility';
 export default class ToastExtensionAbility extends ServiceExtensionAbility {
   private globalThisInstance: GlobalThisUtil = GlobalThisUtil.getInstance();
 
+  private parseWantWholeTokenInt(value: Object | undefined | null, defaultValue: number): number {
+    if (typeof value === 'number' && Number.isFinite(value)) {
+      return value;
+    }
+    const valueText: string = String(value ?? '');
+    if (/^\d+$/.test(valueText)) {
+      return Number.parseInt(valueText, 10);
+    }
+    return defaultValue;
+  }
+
   async onRequest(want: Want): Promise<void> {
     LogUtil.info(TAG, `toast extension ability start.`)
     const context = this.globalThisInstance!.getObject('screenRecorderContext') as common.ServiceExtensionContext;
     let resName = want?.parameters?.resName?.toString();
     try {
-      let mode = Number(want?.parameters?.mode);
+      let mode = this.parseWantWholeTokenInt(want?.parameters?.mode, 0);
       promptAction.showToast({
         message: StringUtil.getStringByNameSync(resName, context),
       showMode: mode

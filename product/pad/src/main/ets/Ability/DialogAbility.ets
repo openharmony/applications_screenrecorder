@@ -32,6 +32,17 @@ class JsonData {
 
 export default class DialogAbility extends UIExtensionAbility {
   private globalThisInstance: GlobalThisUtil = GlobalThisUtil.getInstance();
+  private parseWantWholeTokenInt(value: Object | undefined | null, defaultValue: number): number {
+    if (typeof value === 'number' && Number.isFinite(value)) {
+      return value;
+    }
+    const valueText: string = String(value ?? '');
+    if (/^\d+$/.test(valueText)) {
+      return Number.parseInt(valueText, 10);
+    }
+    return defaultValue;
+  }
+
   onCreate() {
     LogUtil.info(TAG, `UIExtAbility onCreate`);
     this.globalThisInstance.setObject('UserChoice', 'false');
@@ -61,7 +72,7 @@ export default class DialogAbility extends UIExtensionAbility {
     try {
       let sessionId = -1;
       if (want.parameters?.sessionId !== undefined) {
-        sessionId = Number(want.parameters?.sessionId);
+        sessionId = this.parseWantWholeTokenInt(want.parameters?.sessionId, -1);
       }
       await media.reportAVScreenCaptureUserChoice(sessionId, JSON.stringify(jsonData));
     } catch (err) {

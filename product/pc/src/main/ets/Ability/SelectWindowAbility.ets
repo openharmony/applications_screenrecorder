@@ -38,6 +38,17 @@ class JsonData {
 export default class SelectDialogAbility extends UIAbility {
   private globalThisInstance: GlobalThisUtil = GlobalThisUtil.getInstance();
 
+  private parseWantWholeTokenInt(value: Object | undefined | null, defaultValue: number): number {
+    if (typeof value === 'number' && Number.isFinite(value)) {
+      return value;
+    }
+    const valueText: string = String(value ?? '');
+    if (/^\d+$/.test(valueText)) {
+      return Number.parseInt(valueText, 10);
+    }
+    return defaultValue;
+  }
+
   onCreate(want: Want): void {
     this.globalThisInstance!.setObject('selectContext', this.context);
     this.globalThisInstance!.setObject('selectWant', want);
@@ -52,12 +63,12 @@ export default class SelectDialogAbility extends UIAbility {
     let oldSessionId = -1;
     let oldWantSessionId = oldWant?.parameters?.sessionId;
     if (oldWantSessionId !== undefined) {
-      oldSessionId = Number(oldWantSessionId);
+      oldSessionId = this.parseWantWholeTokenInt(oldWantSessionId, -1);
     }
     let newSessionId = -1;
     let newWantSessionId = want?.parameters?.sessionId;
     if (newWantSessionId !== undefined) {
-      newSessionId = Number(newWantSessionId);
+      newSessionId = this.parseWantWholeTokenInt(newWantSessionId, -1);
     }
     if (newSessionId !== oldSessionId) {
       LogUtil.info(TAG, 'new session start again');
@@ -145,7 +156,7 @@ export default class SelectDialogAbility extends UIAbility {
         let sessionId = -1;
         let wantSessionId = want?.parameters?.sessionId;
         if (wantSessionId !== undefined) {
-          sessionId = Number(wantSessionId);
+          sessionId = this.parseWantWholeTokenInt(wantSessionId, -1);
         }
         await media.reportAVScreenCaptureUserChoice(sessionId, JSON.stringify(jsonData));
       }
