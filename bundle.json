@@ -1,5 +1,5 @@
 {
-  "name": "@ohos/screenrecorder",
+  "name": "@ohos/applications_screenrecorder",
   "description": "ScreenRecorder app for standard system.",
   "version": "3.0",
   "license": "Apache License 2.0",
@@ -10,7 +10,7 @@
   "dirs": {},
   "scripts": {},
   "component": {
-    "name": "screenrecorder",
+    "name": "applications_screenrecorder",
     "subsystem": "applications",
     "syscap": [],
     "features": [],

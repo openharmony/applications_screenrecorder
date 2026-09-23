@@ -2,7 +2,7 @@
 
 ## Introduction
 
-**Screen Recorder** (package name: `com.ohos.screenrecorder`) is a pre-installed **system application** in OpenHarmony that captures screen content and audio via the `AVScreenCaptureRecorder` class from `@kit.MediaKit`, providing screen recording, recording interaction and control, recording file processing, and security & privacy screen handling capabilities across phones, tablets, and PCs.
+**Screen Recorder** (package name: `com.ohos.screenrecorder`) is a pre-installed **system application** in OpenHarmony standard system that captures screen content and audio via the `AVScreenCaptureRecorder` class from `@kit.MediaKit`, providing screen recording, recording interaction and control, recording file processing, and security & privacy screen handling capabilities across phones, tablets, and PCs.
 
 This application is a pre-installed system app. Users can trigger recording via Control Center quick toggles and keyboard shortcuts.
 

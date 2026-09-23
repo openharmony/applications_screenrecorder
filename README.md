@@ -2,7 +2,7 @@
 
 ## 简介
 
-**录屏**（包名：`com.ohos.screenrecorder`）是 OpenHarmony 中预置的 **系统应用**，通过 `@kit.MediaKit` 中的 `AVScreenCaptureRecorder` 类采集屏幕画面与音频，提供屏幕录制、录制交互控制、录制文件处理、安全隐私界面处理能力，并适配 Phone、Pad、PC 设备形态。
+**录屏**（包名：`com.ohos.screenrecorder`）是 OpenHarmony 标准系统中预置的 **系统应用**，通过 `@kit.MediaKit` 中的 `AVScreenCaptureRecorder` 类采集屏幕画面与音频，提供屏幕录制、录制交互控制、录制文件处理、安全隐私界面处理能力，并适配 Phone、Pad、PC 设备形态。
 
 本应用为系统预置应用，用户可从控制中心快捷开关、快捷键触发录屏。
 
