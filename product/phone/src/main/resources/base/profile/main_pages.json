@@ -4,7 +4,6 @@
     "pages/DialogPage",
     "pages/ScreenRecorderControlPage",
     "pages/EmptyPage",
-    "pages/ScreenRecorderPage",
     "pages/PrivacyControlPage"
   ]
 }
