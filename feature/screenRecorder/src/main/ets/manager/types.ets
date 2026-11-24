@@ -222,19 +222,19 @@ export const INIT_SUB_WINDOW_BLUR_VALUE = 200;
 // Do not set this parameter to 0. Otherwise, the blur effect will be turned off.
 export const FINAL_SUB_WINDOW_BLUR_VALUE = 0.1;
 
-export const POSITION_AND_SCALE_ANIMATION_TIMEOUT = 350;
+export const POSITION_AND_SCALE_ANIMATION_TIMEOUT = 0;
 
 export const SCALE_ANIMATION_DELAY = 350;
 
-export const SCALE_ANIMATION_TIMEOUT = 250;
+export const SCALE_ANIMATION_TIMEOUT = 0;
 
 export const BLUR_ANIMATION_DELAY = 100;
 
-export const BLUR_ANIMATION_TIMEOUT = 500;
+export const BLUR_ANIMATION_TIMEOUT = 0;
 
 export const SHARE_BUTTON_OPACITY_DELAY = 200;
 
-export const SHARE_BUTTON_OPACITY_TIMEOUT = 150;
+export const SHARE_BUTTON_OPACITY_TIMEOUT = 0;
 
 export const INIT_THUMB_BORDER_OPACITY_VALUE = 0;
 
@@ -242,7 +242,7 @@ export const FINAL_THUMB_BORDER_OPACITY_VALUE = 1;
 
 export const OPACITY_ANIMATION_DELAY = 100;
 
-export const OPACITY_ANIMATION_TIMEOUT = 100;
+export const OPACITY_ANIMATION_TIMEOUT = 0;
 
 export const FONT_SIZE_UNIT = 'px';
 
