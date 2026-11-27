@@ -7,7 +7,6 @@
     "pages/ScreenRecorderControlPage",
     "pages/EmptyPage",
     "pages/SelectWindowPage",
-    "pages/ScreenRecorderPage",
     "pages/PrivacyControlPage"
   ]
 }
